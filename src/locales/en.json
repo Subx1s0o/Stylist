@@ -1,0 +1,10 @@
+{
+  "Home": {
+    "text": "Hello!"
+  },
+  "NotFound": {
+    "title": "We dont Found That Page",
+    "description": "The page is not Found, please return to Home page",
+    "button-title": "Go Home"
+  }
+}

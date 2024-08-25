@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "tailwindcss",
+    "@next/eslint-plugin-next"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:tailwindcss/recommended",
+    "next/core-web-vitals",
+    "plugin:@next/next/recommended"
+  ],
+  "rules": {
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/enforces-shorthand": "warn",
+    "tailwindcss/no-custom-classname": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
