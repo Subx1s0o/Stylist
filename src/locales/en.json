@@ -1,4 +1,12 @@
 {
+  "Common": {
+    "menu": {
+      "about-me": "About me",
+      "portfolio": "Portfolio",
+      "services": "Services",
+      "contacts": "Contacts"
+    }
+  },
   "Home": {
     "text": "Hello!"
   },

@@ -1,3 +1,5 @@
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header";
 import "@/globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
@@ -32,12 +34,12 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-white font-alegreya">
-       <main>
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-       </main>
+      <body className="bg-white font-alegreya text-black">
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

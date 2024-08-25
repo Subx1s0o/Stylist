@@ -1,4 +1,12 @@
 {
+  "Common": {
+    "menu": {
+      "about-me": "Про мене",
+      "portfolio": "Портфоліо",
+      "services": "Послуги",
+      "contacts": "Контакти"
+    }
+  },
   "Home": {
     "text": "Привіт!"
   },
