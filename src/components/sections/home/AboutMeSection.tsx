@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function AboutMeSection() {
   const t = useTranslations("Home.about-me");
   return (
-    <section className="py-[60px]">
+    <section className="pb-[60px]">
       <div className="my-container">
         <h2 className="text-md text-center mb-5">{t("title")}</h2>
         <p className="mb-[17px] max-w-[195px] text-sm">{t("first-text")}</p>
