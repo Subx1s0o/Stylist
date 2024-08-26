@@ -8,7 +8,10 @@
     }
   },
   "Home": {
-    "text": "Hello!"
+    "metadata": {
+      "title": "Personal Stylist Marysia Kozlova",
+      "description": "Style is something that is in each of us, and all we need to do is find it"
+    }
   },
   "NotFound": {
     "title": "We dont Found That Page",
