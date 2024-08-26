@@ -7,13 +7,13 @@ import Link from "next/link";
 export default function Footer() {
   const t = useTranslations("Common.menu");
   return (
-    <footer>
-      <div className="my-container flex flex-col items-center gap-6">
+    <footer className="border-t border-lightGrey">
+      <div className="mx-auto flex flex-col items-center gap-6 p-5">
         <Link href="/">
           <LogoIcon width={64} height={64} />
         </Link>
-        <nav className=" w-full">
-          <ul className="flex flex-col gap-1 w-full mb-6">
+        <nav className=" w-full flex flex-col gap-6 items-center">
+          <ul className="flex flex-col gap-1 w-full ">
             {links.slice(0, 3).map(({ href, key }) => (
               <li key={key}>
                 <Link
@@ -25,7 +25,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-col items-center">
+          <ul className="flex flex-col max-w-[187px] gap-3">
             {socialLinks.map(({ href, label, icon: Icon }) => (
               <li key={label} className="flex items-center gap-2">
                 <a className="text-sm flex items-center gap-2" href={href}>
@@ -36,6 +36,7 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
+        <p className="py-2">© 2024</p>
       </div>
     </footer>
   );

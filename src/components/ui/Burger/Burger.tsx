@@ -18,11 +18,7 @@ export default function Burger() {
 
   return (
     <div ref={menuRef} className="relative inline-flex">
-      <button
-        className="z-10"
-        aria-labelledby="menu-label"
-        onClick={toggleMenu}
-      >
+      <button className="z-10" aria-label="Toggle Menu" onClick={toggleMenu}>
         <BurgerIcon />
       </button>
       <LazyMotion features={loadFeatures}>
