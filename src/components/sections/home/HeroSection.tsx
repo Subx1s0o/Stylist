@@ -27,7 +27,7 @@ export default function HeroSection() {
           <h1 className="text-xmd font-exo2 text-white">{t("hero.welcome")}</h1>
         </div>
         <div className="absolute bottom-[60px] right-[79px] max-w-[139px]">
-          <p className="text-base font-exo2 text-white">
+          <p className="text-base text-end font-exo2 text-white">
             {t("hero.description")}
           </p>
         </div>
