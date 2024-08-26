@@ -1,5 +1,5 @@
 "use client";
-import BurgerIcon from "@/assets/icons/burger.svg";
+import BurgerIcon from "@/assets/icons/ui/burger.svg";
 import useOutsideClick from "@/hooks/useOutsideClick";
 import { AnimatePresence, LazyMotion, m } from "framer-motion";
 import { useRef, useState } from "react";

@@ -1,4 +1,4 @@
-import LogoIcon from "@/assets/icons/Logo32.svg";
+import LogoIcon from "@/assets/icons/logos/Logo32.svg";
 import Burger from "@/components/ui/Burger/Burger";
 import Link from "next/link";
 export default function Header() {

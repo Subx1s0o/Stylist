@@ -18,49 +18,42 @@ export default {
         white: "#FAF8F0",
       },
       fontSize: {
-        "h1-sm": [
+        xmd: [
           "36px",
           {
             fontWeight: 600,
             lineHeight: "20px",
           },
         ],
-        "h2-sm": [
+        md: [
           "32px",
           {
             fontWeight: 500,
             lineHeight: "20px",
           },
         ],
-        "h3-sm": [
+        base: [
           "20px",
           {
             fontWeight: 500,
             lineHeight: "20px",
           },
         ],
-        "button-sm": [
-          "20px",
-          {
-            fontWeight: 500,
-            lineHeight: "20px",
-          },
-        ],
-        "link-sm": [
+        "base-thin": [
           "20px",
           {
             fontWeight: 400,
             lineHeight: "20px",
           },
         ],
-        "regular-sm": [
+        sm: [
           "14px",
           {
             fontWeight: 400,
             lineHeight: "20px",
           },
         ],
-        "captions-sm": [
+        xs: [
           "13px",
           {
             fontWeight: 400,
