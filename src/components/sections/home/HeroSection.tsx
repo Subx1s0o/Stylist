@@ -14,7 +14,6 @@ export default function HeroSection() {
           layout="responsive"
         /> */}
       </div>
-      ;
     </section>
   );
 }
