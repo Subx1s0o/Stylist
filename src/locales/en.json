@@ -11,7 +11,12 @@
     "metadata": {
       "title": "Personal Stylist Marysia Kozlova",
       "description": "Style is something that is in each of us, and all we need to do is find it"
-    }
+    },
+    "hero": {
+      "welcome": "Congratulations on your journey to your style!",
+      "description": "Personal stylist Marysia Kozlova"
+    },
+    "advice": "Book a consult"
   },
   "NotFound": {
     "description": "This page is not available, return to the main page and try again later",

@@ -17,7 +17,7 @@ export default function Footer() {
             {links.slice(0, 3).map(({ href, key }) => (
               <li key={key}>
                 <Link
-                  className="text-base block transition-colors duration-150 text-center py-[6px] hover:bg-black hover:text-white cursor-pointer w-full"
+                  className="text-base block  text-center py-[6px] cursor-pointer w-full"
                   href={href}
                 >
                   {t(key)}

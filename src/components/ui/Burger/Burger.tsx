@@ -18,7 +18,7 @@ export default function Burger() {
 
   return (
     <div ref={menuRef} className="relative inline-flex">
-      <button className="z-10" aria-label="Toggle Menu" onClick={toggleMenu}>
+      <button className="z-20" aria-label="Toggle Menu" onClick={toggleMenu}>
         <BurgerIcon />
       </button>
       <LazyMotion features={loadFeatures}>
@@ -29,7 +29,7 @@ export default function Burger() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-0 right-0 pt-[68px] pb-4 px-4 bg-white"
+              className="absolute top-0 right-0 pt-[68px] pb-4 px-4 bg-white z-10"
             >
               <BurgerMenuLinks onLinkClick={() => setOpen(false)} />
               <MobileLocaleSwitcher />

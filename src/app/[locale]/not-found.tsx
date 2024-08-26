@@ -1,5 +1,6 @@
+import BlackLink from "@/components/ui/BlackLink";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+
 export default function NotFound() {
   const t = useTranslations("NotFound");
   return (
@@ -9,12 +10,9 @@ export default function NotFound() {
         {t("description")}
       </p>
       <div className="">
-        <Link
-          className="py-3 inline-block bg-black text-center text-base text-white w-full"
-          href="/"
-        >
-          {t("button-title")}
-        </Link>
+        <BlackLink href="/">  {t("button-title")}</BlackLink>
+        
+   
       </div>
     </div>
   );

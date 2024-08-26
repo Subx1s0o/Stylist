@@ -29,7 +29,7 @@ export default {
           "36px",
           {
             fontWeight: 600,
-            lineHeight: "20px",
+            lineHeight: "40px",
           },
         ],
         md: [
