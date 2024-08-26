@@ -16,6 +16,13 @@
       "welcome": "Congratulations on your journey to your style!",
       "description": "Personal stylist Marysia Kozlova"
     },
+    "about-me": {
+      "title": "About Me",
+      "first-text": "Hello! My name is Marysia and I am your personal stylist.",
+      "second-text": "I have been working in the beauty industry for over 10 years, with countless shoots and an incredible number of satisfied clients.",
+      "third-text": "As a makeup artist, I have gained extensive experience working with women, which I am very proud of."
+    },
+
     "advice": "Book a consult"
   },
   "NotFound": {

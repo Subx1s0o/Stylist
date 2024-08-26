@@ -18,7 +18,8 @@ export default function HeroSection() {
             alt="hero image"
             width={375}
             height={620}
-            layout="responsive"
+            style={{ width: "100%", height: "auto" }}
+            priority
           />
         </picture>
 
