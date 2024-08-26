@@ -14,8 +14,7 @@
     }
   },
   "NotFound": {
-    "title": "We dont Found That Page",
-    "description": "The page is not Found, please return to Home page",
+    "description": "This page is not available, please return to the main page and try again later",
     "button-title": "Go Home"
   }
 }

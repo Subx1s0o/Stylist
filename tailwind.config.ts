@@ -8,7 +8,7 @@ export default {
         sm: "375px",
       },
       fontFamily: {
-        exo2: ["var(--font-exo2)", "sans-serif"],
+        exo2: ["var(--font-exo_2)", "sans-serif"],
         alegreya: ["var(--font-alegreya)", "serif"],
       },
       colors: {
@@ -18,6 +18,13 @@ export default {
         white: "#FAF8F0",
       },
       fontSize: {
+        xl: [
+          "64px",
+          {
+            fontWeight: 600,
+            lineHeight: "40px",
+          },
+        ],
         xmd: [
           "36px",
           {

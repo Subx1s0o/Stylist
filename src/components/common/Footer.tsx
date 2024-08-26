@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-lightGrey">
       <div className="mx-auto flex flex-col items-center gap-6 p-5">
-        <Link href="/">
+        <Link href="/" aria-label="logotype">
           <LogoIcon width={64} height={64} />
         </Link>
         <nav className=" w-full flex flex-col gap-6 items-center">

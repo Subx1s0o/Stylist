@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "react-responsive-modal/styles.css";
+
 .my-container {
   margin: 0 auto;
   padding-left: 16px;

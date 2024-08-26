@@ -37,13 +37,15 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale || "uk"}>
+    <html lang={locale || "uk"} className="h-full">
       <body
-        className={`${alegreya.variable} ${exo_2.variable} bg-white font-alegreya text-black`}
+        className={`${alegreya.variable} ${exo_2.variable} bg-white font-alegreya text-black h-full flex flex-col`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main>{children}</main>
+          <main className="flex-1 flex flex-col justify-center">
+            {children}
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>
