@@ -53,22 +53,38 @@ export default function Burger() {
               <nav className="mb-1">
                 <ul className="flex flex-col gap-1">
                   <li className="py-[6px] ">
-                    <Link href="/about-me" onClick={handleLinkClick}>
+                    <Link
+                      className="text-MobileMenuLink"
+                      href="/about-me"
+                      onClick={handleLinkClick}
+                    >
                       {t("about-me")}
                     </Link>
                   </li>
                   <li className="py-[6px] ">
-                    <Link href="/services" onClick={handleLinkClick}>
+                    <Link
+                      className="text-MobileMenuLink"
+                      href="/services"
+                      onClick={handleLinkClick}
+                    >
                       {t("services")}
                     </Link>
                   </li>
                   <li className="py-[6px] ">
-                    <Link href="/portfolio" onClick={handleLinkClick}>
+                    <Link
+                      className="text-MobileMenuLink"
+                      href="/portfolio"
+                      onClick={handleLinkClick}
+                    >
                       {t("portfolio")}
                     </Link>
                   </li>
                   <li className="py-[6px] ">
-                    <Link href="/contacts" onClick={handleLinkClick}>
+                    <Link
+                      className="text-MobileMenuLink"
+                      href="/contacts"
+                      onClick={handleLinkClick}
+                    >
                       {t("contacts")}
                     </Link>
                   </li>

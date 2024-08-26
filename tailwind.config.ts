@@ -41,20 +41,17 @@ const config: Config = {
         },
         mobileButton: {
           fontSize: "20px",
-          color: "#000000",
           fontWeight: "500",
           lineHeight: "20px",
         },
 
-        burgerMenuLink: {
+        MobileMenuLink: {
           fontSize: "20px",
-          color: "#000000",
           fontWeight: "400",
           lineHeight: "20px",
         },
         mobileRegular: {
           fontSize: "14px",
-          color: "#000000",
           fontWeight: "400",
           lineHeight: "20px",
         },

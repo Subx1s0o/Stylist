@@ -1,6 +1,6 @@
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
-import "@/globals.css";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";

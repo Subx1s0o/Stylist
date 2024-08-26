@@ -16,7 +16,7 @@ export default function MobileLocaleSwitcher() {
     <div className="flex gap-2 justify-center">
       <button
         onClick={() => changeLocale("ua")}
-        className={`py-[6px] px-4 ${
+        className={`hover:bg-black text-MobileMenuLink hover:text-white transition-colors duration-150  py-[6px] px-4 ${
           locale === "ua"
             ? "bg-darkGrey text-white"
             : "bg-transparent text-black"
@@ -26,7 +26,7 @@ export default function MobileLocaleSwitcher() {
       </button>
       <button
         onClick={() => changeLocale("en")}
-        className={`py-[6px] px-4 ${
+        className={`hover:bg-black text-MobileMenuLink hover:text-white transition-colors duration-150  py-[6px] px-4 ${
           locale === "en"
             ? "bg-darkGrey text-white"
             : "bg-transparent text-black"
