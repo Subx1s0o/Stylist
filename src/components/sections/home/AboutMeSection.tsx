@@ -10,7 +10,7 @@ export default function AboutMeSection() {
         <h2 className="text-md text-center mb-5">{t("title")}</h2>
         <p className="mb-[17px] max-w-[195px] text-sm">{t("first-text")}</p>
         <ul className="grid grid-rows-2 gap-[22px] ">
-          <li className="flex gap-4 items-center">
+          <li className="grid grid-cols-[1fr_1fr] gap-4 items-center">
             <div className="relative">
               <picture>
                 <source
