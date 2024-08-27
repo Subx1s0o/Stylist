@@ -51,7 +51,7 @@ export default function ServicesSection({ className }: Props) {
                     width: "100%",
                     height: "auto",
                   }}
-                  src="/images/services/service.jpg"
+                  src="/images/services/service2.jpg"
                   alt="styling"
                 ></Image>
               </picture>

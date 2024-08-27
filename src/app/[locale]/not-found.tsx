@@ -1,4 +1,4 @@
-import BlackLink from "@/components/ui/BlackLink";
+import BlackLink from "@/components/ui/buttons/BlackLink";
 import { useTranslations } from "next-intl";
 
 export default function NotFound() {
