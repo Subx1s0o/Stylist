@@ -10,9 +10,7 @@ export default function NotFound() {
         {t("description")}
       </p>
       <div className="">
-        <BlackLink href="/">  {t("button-title")}</BlackLink>
-        
-   
+        <BlackLink href="/"> {t("button-title")}</BlackLink>
       </div>
     </div>
   );
