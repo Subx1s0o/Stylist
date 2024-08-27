@@ -70,7 +70,7 @@ export default function PortfolioSection() {
                 media="(min-resolution: 2dppx)"
               />
               <Image
-                width={167}
+                width={168}
                 height={224}
                 style={{
                   width: "100%",
