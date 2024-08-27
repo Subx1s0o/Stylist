@@ -26,8 +26,13 @@
       "title": "Style is something that exists within each of us, and all we need to do is find it.",
       "author": "Diane von Fürstenberg"
     },
-
     "advice": "Book a consult"
+  },
+  "Services": {
+    "title": "Services",
+    "description": "With a solid background in makeup artistry, I realized that I want to make women even more beautiful, so now I can offer services for any request.",
+    "makeup": "Makeup",
+    "style": "Style"
   },
   "NotFound": {
     "description": "This page is not available, return to the main page and try again later",

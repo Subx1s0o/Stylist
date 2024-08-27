@@ -8,7 +8,7 @@ export default function QuoteSection() {
           ‘’
         </p>
         <h2 className="text-white font-exo2 text-base mb-5">{t("title")}</h2>
-        <p className="text-white font-exo2 text-end text-sm">{t("author")}</p>
+        <p className="text-white  text-end text-sm">{t("author")}</p>
       </div>
     </section>
   );

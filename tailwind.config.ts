@@ -16,6 +16,7 @@ export default {
         lightGrey: "#B5AFAE",
         black: "#2B2423",
         white: "#FAF8F0",
+        "primary-black": "rgba(43, 36, 35, 0.8)",
       },
       fontSize: {
         xl: [

@@ -9,12 +9,12 @@ export default function HeroSection() {
       <div className="relative mb-3">
         <picture>
           <source
-            srcSet="/images/hero@2x.jpg 2x"
+            srcSet="/images/hero/hero@2x.jpg 2x"
             media="(min-resolution: 2dppx)"
           />
 
           <Image
-            src="/images/hero.jpg"
+            src="/images/hero/hero.jpg"
             alt="hero image"
             width={375}
             height={620}

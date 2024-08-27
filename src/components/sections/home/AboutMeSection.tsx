@@ -7,18 +7,18 @@ export default function AboutMeSection() {
   return (
     <section className="pb-[60px]">
       <div className="my-container">
-        <h2 className="text-md text-center mb-5">{t("title")}</h2>
+        <h2 className="text-md font-exo2 text-center mb-5">{t("title")}</h2>
         <p className="mb-[17px] max-w-[195px] text-sm">{t("first-text")}</p>
         <ul className="grid grid-rows-2 gap-[22px] ">
           <li className="grid grid-cols-[1fr_1fr] gap-4 items-center">
             <div className="relative">
               <picture>
                 <source
-                  srcSet="/images/about-me1@2x.jpg 2x"
+                  srcSet="/images/about/about-me1@2x.jpg 2x"
                   media="(min-resolution: 2dppx)"
                 />
                 <Image
-                  src="/images/about-me1.jpg"
+                  src="/images/about/about-me1.jpg"
                   alt="Stylish People "
                   width={174}
                   height={272}
@@ -43,11 +43,11 @@ export default function AboutMeSection() {
             <div className="relative">
               <picture>
                 <source
-                  srcSet="/images/about-me2@2x.jpg 2x"
+                  srcSet="/images/about/about-me2@2x.jpg 2x"
                   media="(min-resolution: 2dppx)"
                 />
                 <Image
-                  src="/images/about-me2.jpg"
+                  src="/images/about/about-me2.jpg"
                   alt="Stylish People "
                   width={217}
                   height={241}
