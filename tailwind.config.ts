@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: "375px",
+        sm: "360px",
       },
       fontFamily: {
         exo2: ["var(--font-exo_2)", "sans-serif"],
@@ -14,6 +14,7 @@ export default {
       colors: {
         darkGrey: "#645E58",
         lightGrey: "#B5AFAE",
+        error: "#FF4444",
         black: "#2B2423",
         white: "#FAF8F0",
         "primary-black": "rgba(43, 36, 35, 0.8)",

@@ -1,0 +1,44 @@
+"use client";
+import ContactForm from "@/components/forms/ContactForm";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+
+export default function ContactsPage() {
+  const t = useTranslations("Contacts");
+
+  return (
+    <section className="pb-[60px]">
+      <div className="my-container">
+        <h2 className="text-md my-5 font-exo2 text-center">{t("title")}</h2>
+        <p className="text-sm mb-2">{t("first-description")}</p>
+        <p className="text-sm mb-5">{t("second-description")}</p>
+      </div>
+
+      <div className="relative">
+        <picture>
+          <source
+            srcSet="/images/contacts/background@2x.jpg 2x"
+            media="(min-resolution: 2dppx)"
+          />
+          <Image
+            width={375}
+            height={410}
+            style={{ width: "100%", height: "auto" }}
+            src="/images/contacts/background.jpg"
+            alt="background photo"
+            priority
+          />
+        </picture>
+        <div className="absolute w-full my-container top-10 sm:top-[60px] bottom-[78px] ">
+          <h3 className="mb-3 text-white font-exo2 text-center text-base">
+            {t("form.title")}
+          </h3>
+          <p className="text-sm text-white mb-5 sm:mb-10  text-center">
+            {t("form.subtitle")}
+          </p>
+          <ContactForm t={t} />
+        </div>
+      </div>
+    </section>
+  );
+}

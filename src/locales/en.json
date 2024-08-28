@@ -40,6 +40,28 @@
     "makeup": "Makeup",
     "style": "Style"
   },
+  "Contacts": {
+    "title": "Contacts",
+    "first-description": "Appearance always influences how you perceive yourself, your confidence, and your courage to express your inner world.",
+    "second-description": "My services will help identify your needs and find the best solution.",
+    "form": {
+      "title": "Get a Consultation",
+      "subtitle": "After receiving your request, I will contact you within 2 days",
+      "stable": "Book a consult",
+      "submitting": "Sending...",
+      "validation": {
+        "required": {
+          "name": "Name is required",
+          "email": "Email is required"
+        }
+      },
+      "placeholders": {
+        "name": "Enter your name *",
+        "email": "Enter your email *",
+        "link": "Add a link to your social media"
+      }
+    }
+  },
   "NotFound": {
     "description": "This page is not available, return to the main page and try again later",
     "button-title": "Go Home"
