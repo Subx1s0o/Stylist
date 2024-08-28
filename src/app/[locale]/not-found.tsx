@@ -1,4 +1,5 @@
-import BlackLink from "@/components/ui/buttons/BlackLink";
+
+import CustomLink from "@/components/ui/CustomLink";
 import { useTranslations } from "next-intl";
 
 export default function NotFound() {
@@ -10,7 +11,7 @@ export default function NotFound() {
         {t("description")}
       </p>
       <div className="">
-        <BlackLink href="/"> {t("button-title")}</BlackLink>
+        <CustomLink variant="black" href="/"> {t("button-title")}</CustomLink>
       </div>
     </div>
   );

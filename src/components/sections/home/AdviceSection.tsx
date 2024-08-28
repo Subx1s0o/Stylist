@@ -1,4 +1,4 @@
-import WhiteLink from "@/components/ui/buttons/WhiteLink";
+import CustomLink from "@/components/ui/CustomLink";
 import { useTranslations } from "next-intl";
 export default function AdviceSection() {
   const t = useTranslations("Home");
@@ -8,7 +8,9 @@ export default function AdviceSection() {
         <h2 className="text-center mb-10 text-md text-white">
           {t("question")}
         </h2>
-        <WhiteLink href="/contacts">{t("advice")}</WhiteLink>
+        <CustomLink href="/contacts" variant="white">
+          {t("advice")}
+        </CustomLink>
       </div>
     </section>
   );

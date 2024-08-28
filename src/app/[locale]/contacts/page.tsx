@@ -23,17 +23,17 @@ export default function ContactsPage() {
           <Image
             width={375}
             height={410}
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", minHeight: "335px" }}
             src="/images/contacts/background.jpg"
             alt="background photo"
             priority
           />
         </picture>
-        <div className="absolute w-full my-container top-10 sm:top-[60px] bottom-[78px] ">
+        <div className="absolute w-full my-container top-[40px] sm:top-[60px] ">
           <h3 className="mb-3 text-white font-exo2 text-center text-base">
             {t("form.title")}
           </h3>
-          <p className="text-sm text-white mb-5 sm:mb-10  text-center">
+          <p className="text-sm  text-white mb-3 xs:mb-8 sm:mb-10 text-center">
             {t("form.subtitle")}
           </p>
           <ContactForm t={t} />

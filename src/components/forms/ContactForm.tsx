@@ -1,3 +1,6 @@
+"use client";
+import CustomButton from "@/components/ui/CustomButton";
+import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 type FormValues = {
@@ -6,12 +9,28 @@ type FormValues = {
   email: string;
 };
 
+interface ContactFormProps {
+  t: (key: string) => string;
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function ContactForm({ t }: any) {
+export default function ContactForm({ t }: ContactFormProps) {
   const { register, handleSubmit, formState, reset } = useForm<FormValues>({
     mode: "onBlur",
   });
   const { isSubmitting, errors } = formState;
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 360);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Set initial value
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     return new Promise<void>((resolve) => {
@@ -24,12 +43,22 @@ export default function ContactForm({ t }: any) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col">
-      <div className="flex flex-col mb-5 gap-2">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="w-full gap-5 flex flex-col"
+    >
+      <div className="flex flex-col gap-2">
+        {/* Name Input */}
         <label>
           <input
             placeholder={t("form.placeholders.name")}
-            className="bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white text-white duration-200 outline-none border-b-2 border-b-lightGrey transition-colors text-sm focus:border-b-white"
+            className={`bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white text-white duration-200 outline-none border-b-2 transition-colors text-sm ${
+              errors.name
+                ? isSmallScreen
+                  ? "border-b-red-500"
+                  : "border-b-red-500"
+                : "border-b-lightGrey"
+            } focus:border-b-white`}
             type="text"
             {...register("name", {
               required: t("form.validation.name.required"),
@@ -43,17 +72,24 @@ export default function ContactForm({ t }: any) {
               },
             })}
           />
-          {errors?.name ? (
+          {errors.name && !isSmallScreen && (
             <div className="mt-1">
-              <p className="text-error text-sm">{errors.name?.message}</p>
+              <p className="text-error text-sm">{errors.name.message}</p>
             </div>
-          ) : null}
+          )}
         </label>
 
+        {/* Email Input */}
         <label>
           <input
             placeholder={t("form.placeholders.email")}
-            className="bg-transparent  rounded-none w-full py-[6px] px-3 placeholder:text-white  transition-color duration-200 text-white outline-none border-b-2 border-b-lightGrey text-sm focus:border-b-white"
+            className={`bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white transition-color duration-200 text-white outline-none border-b-2 text-sm ${
+              errors.email
+                ? isSmallScreen
+                  ? "border-b-red-500"
+                  : "border-b-red-500"
+                : "border-b-lightGrey"
+            } focus:border-b-white`}
             type="email"
             {...register("email", {
               required: t("form.validation.email.required"),
@@ -67,36 +103,38 @@ export default function ContactForm({ t }: any) {
               },
             })}
           />
-          {errors?.email ? (
+          {errors.email && !isSmallScreen && (
             <div className="mt-1">
-              <p className="text-error text-sm">{errors.email?.message}</p>
+              <p className="text-error text-sm">{errors.email.message}</p>
             </div>
-          ) : null}
+          )}
         </label>
 
+        {/* Link Input */}
         <label>
           <input
             placeholder={t("form.placeholders.link")}
-            className="bg-transparent w-full py-[6px] px-3 placeholder:text-white transition-colors duration-200 text-white outline-none  border-b-2 rounded-none border-b-lightGrey text-sm focus:border-b-white"
+            className={`bg-transparent w-full py-[6px] px-3 placeholder:text-white transition-colors duration-200 text-white outline-none border-b-2 rounded-none text-sm ${
+              errors.link
+                ? isSmallScreen
+                  ? "border-b-red-500"
+                  : "border-b-red-500"
+                : "border-b-lightGrey"
+            } focus:border-b-white`}
             type="text"
-            {...register("link", {
-              required: "",
-            })}
+            {...register("link")}
           />
-          {errors?.link ? (
+          {errors.link && !isSmallScreen && (
             <div className="mt-1">
-              <p></p>
+              <p className="text-error text-sm">{errors.link.message}</p>
             </div>
-          ) : null}
+          )}
         </label>
       </div>
 
-      <button
-        className="py-3 inline-block bg-white text-center text-base text-black w-full"
-        type="submit"
-      >
+      <CustomButton variant="white" type="submit">
         {isSubmitting ? t("form.submitting") : t("form.stable")}
-      </button>
+      </CustomButton>
     </form>
   );
 }

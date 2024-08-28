@@ -1,4 +1,4 @@
-import BorderLink from "@/components/ui/buttons/BorderLink";
+import CustomLink from "@/components/ui/CustomLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 export default function PortfolioSection() {
@@ -82,7 +82,9 @@ export default function PortfolioSection() {
             </picture>
           </li>
         </ul>
-        <BorderLink href="/portfolio">{t("see-more")}</BorderLink>
+        <CustomLink variant="outline" href="/portfolio">
+          {t("see-more")}
+        </CustomLink>
       </div>
     </section>
   );

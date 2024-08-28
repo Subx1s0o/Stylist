@@ -1,4 +1,4 @@
-import BlackLink from "@/components/ui/buttons/BlackLink";
+import CustomLink from "@/components/ui/CustomLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -33,7 +33,9 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="my-container">
-        <BlackLink href="/contacts">{t("advice")}</BlackLink>
+        <CustomLink href="/contacts" variant="black">
+          {t("advice")}
+        </CustomLink>
       </div>
     </section>
   );

@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: "360px",
+        xs: "340px",
+        sm: "375px",
       },
       fontFamily: {
         exo2: ["var(--font-exo_2)", "sans-serif"],
