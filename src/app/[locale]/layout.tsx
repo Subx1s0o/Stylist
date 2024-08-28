@@ -44,7 +44,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale || "uk"} className="h-full">
+    <html lang={locale} className="h-full">
       <body
         className={`${alegreya.variable} ${exo_2.variable} bg-white font-alegreya text-black h-full flex flex-col`}
       >

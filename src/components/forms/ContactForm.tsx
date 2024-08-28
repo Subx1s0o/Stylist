@@ -1,4 +1,3 @@
-"use client";
 import CustomButton from "@/components/ui/CustomButton";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
