@@ -1,4 +1,5 @@
 import AboutMeSection from "@/components/sections/home/AboutMeSection";
+import AdviceSection from "@/components/sections/home/AdviceSection";
 import HeroSection from "@/components/sections/home/HeroSection";
 import PortfolioSection from "@/components/sections/home/PortfolioSection";
 import QuoteSection from "@/components/sections/home/QuoteSection";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <ServicesSection />
       <PortfolioSection />
       <ReviewsSection />
+      <AdviceSection />
     </>
   );
 }

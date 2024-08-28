@@ -1,4 +1,4 @@
-import WhiteLink from "@/components/ui/buttons/WhiteLink";
+import BorderLink from "@/components/ui/buttons/BorderLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 export default function PortfolioSection() {
@@ -82,7 +82,7 @@ export default function PortfolioSection() {
             </picture>
           </li>
         </ul>
-        <WhiteLink href="/portfolio">{t("see-more")}</WhiteLink>
+        <BorderLink href="/portfolio">{t("see-more")}</BorderLink>
       </div>
     </section>
   );

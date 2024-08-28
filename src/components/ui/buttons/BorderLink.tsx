@@ -6,10 +6,10 @@ interface Props {
   children: ReactNode;
 }
 
-export default function BlackLink({ href, children }: Props) {
+export default function WhiteLink({ href, children }: Props) {
   return (
     <Link
-      className="py-3 inline-block bg-white text-center text-base text-black w-full"
+      className="py-3 inline-block bg-transparent text-center border border-black text-bas w-full"
       href={href}
     >
       {children}

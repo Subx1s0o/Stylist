@@ -37,7 +37,7 @@ export default {
           "32px",
           {
             fontWeight: 500,
-            lineHeight: "20px",
+            lineHeight: "38.4px",
           },
         ],
         base: [
