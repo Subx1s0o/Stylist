@@ -77,7 +77,7 @@ export default function ContactForm({ t }: any) {
         <label>
           <input
             placeholder={t("form.placeholders.link")}
-            className="bg-transparent w-full py-[6px] px-3 placeholder:text-white transition-colors duration-200 text-white outline-none  border-b-2 border-lightGrey text-sm focus:border-b-white"
+            className="bg-transparent w-full py-[6px] px-3 placeholder:text-white transition-colors duration-200 text-white outline-none  border-b-2 rounded-none border-b-lightGrey text-sm focus:border-b-white"
             type="text"
             {...register("link", {
               required: "",
