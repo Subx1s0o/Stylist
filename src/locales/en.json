@@ -49,12 +49,20 @@
       "subtitle": "After receiving your request, I will contact you within 2 days",
       "stable": "Book a consult",
       "submitting": "Sending...",
+
       "validation": {
-        "required": {
-          "name": "Name is required",
-          "email": "Email is required"
+        "name": {
+          "required": "Name is required",
+          "min-length": "The name must contain more than 2 characters",
+          "pattern": "Name must contain only letters "
+        },
+        "email": {
+          "required": "Email is required",
+          "min-length": "The email must contain more than 6 characters",
+          "pattern": "Email value is not valid"
         }
       },
+
       "placeholders": {
         "name": "Enter your name *",
         "email": "Enter your email *",
