@@ -2,7 +2,11 @@ import { Locale } from "@/utils/config";
 import { setUserLocale } from "@/utils/locale";
 import { useLocale } from "next-intl";
 
-export default function MobileLocaleSwitcher({ closeMenu }) {
+interface Props {
+  closeMenu: () => void;
+}
+
+export default function MobileLocaleSwitcher({ closeMenu }: Props) {
   const locale = useLocale();
 
   const changeLocale = (value: string): void => {
