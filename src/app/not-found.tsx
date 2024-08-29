@@ -1,4 +1,3 @@
-
 import CustomLink from "@/components/ui/CustomLink";
 import { useTranslations } from "next-intl";
 
@@ -11,7 +10,9 @@ export default function NotFound() {
         {t("description")}
       </p>
       <div className="">
-        <CustomLink variant="black" href="/"> {t("button-title")}</CustomLink>
+        <CustomLink aria-label={t("button-title")} variant="black" href="/">
+          {t("button-title")}
+        </CustomLink>
       </div>
     </div>
   );
