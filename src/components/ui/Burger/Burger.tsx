@@ -15,7 +15,9 @@ export default function Burger() {
   useOutsideClick(menuRef, () => setOpen(false));
 
   const toggleMenu = () => setOpen((prev) => !prev);
-
+  const closeMenu = () => {
+    setOpen(false);
+  };
   return (
     <div ref={menuRef} className="relative inline-flex">
       <button className="z-20" aria-label="Toggle Menu" onClick={toggleMenu}>
@@ -32,7 +34,7 @@ export default function Burger() {
               className="absolute top-0 right-0 pt-[68px] pb-4 px-4 bg-white z-10"
             >
               <BurgerMenuLinks onLinkClick={() => setOpen(false)} />
-              <MobileLocaleSwitcher />
+              <MobileLocaleSwitcher closeMenu={closeMenu} />
             </m.div>
           )}
         </AnimatePresence>

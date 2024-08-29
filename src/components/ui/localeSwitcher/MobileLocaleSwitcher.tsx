@@ -1,13 +1,14 @@
+import { Locale } from "@/utils/config";
+import { setUserLocale } from "@/utils/locale";
 import { useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
 
-export default function MobileLocaleSwitcher() {
+export default function MobileLocaleSwitcher({ closeMenu }) {
   const locale = useLocale();
-  const router = useRouter();
 
-  const changeLocale = (newLocale: string): void => {
-    document.cookie = `NEXT_LOCALE=${newLocale}; path="/"; SameSite=Lax`;
-    router.refresh();
+  const changeLocale = (value: string): void => {
+    const locale = value as Locale;
+    setUserLocale(locale);
+    closeMenu();
   };
 
   return (
