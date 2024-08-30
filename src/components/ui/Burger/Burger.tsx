@@ -1,25 +1,28 @@
 "use client";
 import BurgerIcon from "@/assets/icons/ui/burger.svg";
-import useOutsideClick from "@/hooks/useOutsideClick";
 import { AnimatePresence, LazyMotion, m } from "framer-motion";
 import { useRef, useState } from "react";
+import { useClickAway } from "react-use";
 import MobileLocaleSwitcher from "../localeSwitcher/MobileLocaleSwitcher";
 import BurgerMenuLinks from "./BurgerMenuLinks";
 
 export default function Burger() {
   const [open, setOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  useClickAway(ref, () => setOpen(false));
+
   const loadFeatures = () =>
     import("@/utils/framer.ts").then((res) => res.default);
-
-  useOutsideClick(menuRef, () => setOpen(false));
 
   const toggleMenu = () => setOpen((prev) => !prev);
   const closeMenu = () => {
     setOpen(false);
   };
+
   return (
-    <div ref={menuRef} className="relative inline-flex">
+    <div ref={ref} className="relative inline-flex">
       <button className="z-20" aria-label="Toggle Menu" onClick={toggleMenu}>
         <BurgerIcon />
       </button>

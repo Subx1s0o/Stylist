@@ -99,7 +99,7 @@
   },
 
   "NotFound": {
-    "description": "This page is not available, return to the main page and try again later",
+    "description": "This page is not available. Please return to the previous page and try again later.",
     "button-title": "Go back"
   }
 }

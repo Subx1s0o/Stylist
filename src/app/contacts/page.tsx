@@ -1,4 +1,3 @@
-"use client";
 import ContactForm from "@/components/forms/ContactForm";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -29,14 +28,14 @@ export default function ContactsPage() {
             priority
           />
         </picture>
-        <div className="absolute w-full my-container top-[40px] sm:top-[60px] ">
+        <div className="absolute w-full my-container top-[40px] ">
           <h3 className="mb-3 text-white font-exo2 text-center text-base">
             {t("form.title")}
           </h3>
           <p className="text-sm  text-white mb-3 xs:mb-8 sm:mb-10 text-center">
             {t("form.subtitle")}
           </p>
-          <ContactForm t={t} />
+          <ContactForm />
         </div>
       </div>
     </section>

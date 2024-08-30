@@ -24,7 +24,6 @@ export default function PortfolioSection() {
                 }}
                 src="/images/portfolio/portfolio.jpg"
                 alt="portfolio image"
-                loading="lazy"
               />
             </picture>
           </li>
@@ -43,7 +42,6 @@ export default function PortfolioSection() {
                 }}
                 src="/images/portfolio/portfolio2.jpg"
                 alt="portfolio image"
-                loading="lazy"
               />
             </picture>
           </li>
@@ -62,7 +60,6 @@ export default function PortfolioSection() {
                 }}
                 src="/images/portfolio/portfolio3.jpg"
                 alt="portfolio image"
-                loading="lazy"
               />
             </picture>
           </li>
@@ -81,7 +78,6 @@ export default function PortfolioSection() {
                 }}
                 src="/images/portfolio/portfolio4.jpg"
                 alt="portfolio image"
-                loading="lazy"
               />
             </picture>
           </li>

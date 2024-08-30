@@ -1,7 +1,10 @@
 "use client";
 import CustomButton from "@/components/ui/CustomButton";
-import { useEffect, useState } from "react";
+import { useFormTranslations } from "@/hooks/useFormTranslations";
+import { useLocale } from "next-intl";
+import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useMedia } from "react-use";
 
 type FormValues = {
   name: string;
@@ -9,28 +12,27 @@ type FormValues = {
   email: string;
 };
 
-interface ContactFormProps {
-  t: (key: string) => string;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function ContactForm({ t }: ContactFormProps) {
-  const { register, handleSubmit, formState, reset } = useForm<FormValues>({
-    mode: "onBlur",
-  });
+export default function ContactForm() {
+  const { register, handleSubmit, formState, reset, trigger } =
+    useForm<FormValues>({
+      mode: "onBlur",
+    });
   const { isSubmitting, errors } = formState;
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+
+  const isSmallScreen = useMedia("(max-width:360px)", false);
+
+  const { placeholders, buttons, validation } = useFormTranslations();
+  const locale = useLocale();
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 360);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial value
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    if (errors.name) {
+      trigger("name");
+    }
+    if (errors.email) {
+      trigger("email");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [locale]);
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     return new Promise<void>((resolve) => {
@@ -51,7 +53,7 @@ export default function ContactForm({ t }: ContactFormProps) {
         {/* Name Input */}
         <label>
           <input
-            placeholder={t("form.placeholders.name")}
+            placeholder={placeholders.name}
             className={`bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white text-white duration-200 outline-none border-b-2 transition-colors text-smd ${
               errors.name
                 ? isSmallScreen
@@ -61,14 +63,14 @@ export default function ContactForm({ t }: ContactFormProps) {
             } focus:border-b-white`}
             type="text"
             {...register("name", {
-              required: t("form.validation.name.required"),
+              required: validation.nameRequired,
               minLength: {
                 value: 3,
-                message: t("form.validation.name.min-length"),
+                message: validation.nameMinLength,
               },
               pattern: {
                 value: /^[A-Za-zÀ-ÖØ-öø-ÿĀ-ž]+(?:[\s-][A-Za-zÀ-ÖØ-öø-ÿĀ-ž]+)*$/,
-                message: t("form.validation.name.pattern"),
+                message: validation.namePattern,
               },
             })}
           />
@@ -82,7 +84,7 @@ export default function ContactForm({ t }: ContactFormProps) {
         {/* Email Input */}
         <label>
           <input
-            placeholder={t("form.placeholders.email")}
+            placeholder={placeholders.email}
             className={`bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white transition-color duration-200 text-white outline-none border-b-2 text-smd ${
               errors.email
                 ? isSmallScreen
@@ -92,14 +94,14 @@ export default function ContactForm({ t }: ContactFormProps) {
             } focus:border-b-white`}
             type="email"
             {...register("email", {
-              required: t("form.validation.email.required"),
+              required: validation.emailRequired,
               minLength: {
                 value: 6,
-                message: t("form.validation.email.min-length"),
+                message: validation.emailMinLength,
               },
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
-                message: t("form.validation.email.pattern"),
+                message: validation.emailPattern,
               },
             })}
           />
@@ -113,7 +115,7 @@ export default function ContactForm({ t }: ContactFormProps) {
         {/* Link Input */}
         <label>
           <input
-            placeholder={t("form.placeholders.link")}
+            placeholder={placeholders.link}
             className={`bg-transparent w-full py-[6px] px-3 placeholder:text-white transition-colors duration-200 text-white outline-none border-b-2 rounded-none text-smd ${
               errors.link
                 ? isSmallScreen
@@ -133,7 +135,7 @@ export default function ContactForm({ t }: ContactFormProps) {
       </div>
 
       <CustomButton variant="white" type="submit">
-        {isSubmitting ? t("form.submitting") : t("form.stable")}
+        {isSubmitting ? buttons.submitting : buttons.submit}
       </CustomButton>
     </form>
   );
