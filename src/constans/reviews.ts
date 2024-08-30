@@ -1,28 +1,33 @@
 const avatar = "/images/reviews/avatar.png";
+const avatar_2x = "/images/reviews/avatar@2x.png";
+const avatar2 = "/images/reviews/avatar2.png";
+// const avatar2_2x = "/images/reviews/avatar@2x.png";
+// const avatar3_2x = "/images/reviews/avatar@2x.png";
+const avatar3 = "/images/reviews/avatar3.png";
+const avatar4 = "/images/reviews/avatar4.png";
+const avatar5 = "/images/reviews/avatar5.png";
+// import { useTranslations } from "next-intl";
 
 export const slides = [
   {
+    translateCode: "Iryna",
     photo: avatar,
-    name: "Світлана",
-    job: "Блогерка",
-    text: "Маруся, дуже хочу подякувати тобі за суперську співпрацю та допомогу в створенні мого нового стилю. Твоя професійність, увага до деталей та індивідуальний підхід зробили процес підбору гардеробу неймовірно приємним для мене, бо раніше довгі походи по магазинах додавали мені стресу.",
+    better_photo: avatar_2x,
   },
   {
-    photo: avatar,
-    name: "Світлана",
-    job: "Блогерка",
-    text: "Маруся, дуже хочу подякувати тобі за суперську співпрацю та допомогу в створенні мого нового стилю. Твоя професійність, увага до деталей та індивідуальний підхід зробили процес підбору гардеробу неймовірно приємним для мене, бо раніше довгі походи по магазинах додавали мені стресу.",
+    translateCode: "Alla",
+    photo: avatar2,
   },
   {
-    photo: avatar,
-    name: "Світлана",
-    job: "Блогерка",
-    text: "Маруся, дуже хочу подякувати тобі за суперську співпрацю та допомогу в створенні мого нового стилю. Твоя професійність, увага до деталей та індивідуальний підхід зробили процес підбору гардеробу неймовірно приємним для мене, бо раніше довгі походи по магазинах додавали мені стресу.",
+    translateCode: "Oleksandra",
+    photo: avatar3,
   },
   {
-    photo: avatar,
-    name: "Світлана",
-    job: "Блогерка",
-    text: "Маруся, дуже хочу подякувати тобі за суперську співпрацю та допомогу в створенні мого нового стилю. Твоя професійність, увага до деталей та індивідуальний підхід зробили процес підбору гардеробу неймовірно приємним для мене, бо раніше довгі походи по магазинах додавали мені стресу.",
+    translateCode: "Valeria",
+    photo: avatar4,
+  },
+  {
+    translateCode: "Marina",
+    photo: avatar5,
   },
 ];

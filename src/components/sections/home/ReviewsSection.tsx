@@ -1,10 +1,12 @@
 "use client";
 import RectangleIcon from "@/assets/icons/decoration/about-rectangle.svg";
 import { slides } from "@/constans/reviews";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 export default function ReviewsSection() {
+  const t = useTranslations("Reviews");
   return (
     <section className="pb-[60px]">
       <div className="my-container">
@@ -25,22 +27,32 @@ export default function ReviewsSection() {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="p-5 relative">
+              <div className="p-5 relative  h-full min-h-[263px] flex flex-col">
                 <RectangleIcon className="absolute top-0 right-0 " />
                 <RectangleIcon className="absolute bottom-0 right-0 rotate-90" />
                 <div className="flex mb-3 gap-2">
-                  <Image
-                    src={slide.photo}
-                    alt={slide.name}
-                    width={56}
-                    height={56}
-                  />
+                  <picture>
+                    <source
+                      srcSet={`${slide.better_photo} 2x`}
+                      media="(min-resolution): 2dppx"
+                    />
+                    <Image
+                      src={slide.photo}
+                      alt={t(`${slide.translateCode}.name`)}
+                      width={56}
+                      height={56}
+                    />
+                  </picture>
                   <div className="flex flex-col">
-                    <h3 className="text-base font-exo2">{slide.name}</h3>
-                    <p className="text-sm">{slide.job}</p>
+                    <h3 className="text-base font-exo2">
+                      {t(`${slide.translateCode}.name`)}
+                    </h3>
+                    <p className="text-sm">
+                      {t(`${slide.translateCode}.employment`)}
+                    </p>
                   </div>
                 </div>
-                <p className="text-sm">{slide.text}</p>
+                <p className="text-sm">{t(`${slide.translateCode}.review`)}</p>
                 <RectangleIcon className="absolute top-0 left-0 rotate-[270deg]" />
                 <RectangleIcon className="absolute bottom-0 left-0 rotate-180" />
               </div>

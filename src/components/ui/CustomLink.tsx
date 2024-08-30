@@ -13,10 +13,10 @@ interface LinkProps {
 const CustomLink = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ href, variant = "black", className, children, ...rest }, ref) => {
     const linkClasses = clsx(
-      "py-3 inline-block text-center text-base w-full border-none",
+      "py-3 inline-block text-center text-base w-full ",
       {
-        "bg-black text-white": variant === "black",
-        "bg-white text-black ": variant === "white",
+        "bg-black text-white border-none": variant === "black",
+        "bg-white text-black border-none": variant === "white",
         "bg-transparent text-black border border-black": variant === "outline",
       },
       className

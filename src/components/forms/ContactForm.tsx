@@ -1,3 +1,4 @@
+"use client";
 import CustomButton from "@/components/ui/CustomButton";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -72,7 +73,7 @@ export default function ContactForm({ t }: ContactFormProps) {
             })}
           />
           {errors.name && !isSmallScreen && (
-            <div className="mt-1">
+            <div className="mt-1 ml-3">
               <p className="text-error text-sm">{errors.name.message}</p>
             </div>
           )}
@@ -103,7 +104,7 @@ export default function ContactForm({ t }: ContactFormProps) {
             })}
           />
           {errors.email && !isSmallScreen && (
-            <div className="mt-1">
+            <div className="mt-1 ml-3">
               <p className="text-error text-sm">{errors.email.message}</p>
             </div>
           )}
@@ -124,7 +125,7 @@ export default function ContactForm({ t }: ContactFormProps) {
             {...register("link")}
           />
           {errors.link && !isSmallScreen && (
-            <div className="mt-1">
+            <div className="mt-1 ml-3">
               <p className="text-error text-sm">{errors.link.message}</p>
             </div>
           )}

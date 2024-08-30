@@ -46,8 +46,8 @@
     "second-description": "My services will help identify your needs and find the best solution.",
     "form": {
       "title": "Get a Consultation",
-      "subtitle": "After receiving your request, I will contact you within 2 days",
-      "stable": "Book a consult",
+      "subtitle": "After Sending your request, I will contact you within 2 days",
+      "stable": "Send",
       "submitting": "Sending...",
 
       "validation": {
@@ -70,8 +70,36 @@
       }
     }
   },
+  "Reviews": {
+    "Iryna": {
+      "name": "Iryna",
+      "employment": "Olympic Champion",
+      "review": "You not only helped me find a comfortable look, but also accurately considered my preferences and body features. Thanks to you, I feel confident and look great. I am very grateful for your professionalism and attention to detail. I will definitely come back again and recommend you to my friends."
+    },
+    "Alla": {
+      "name": "Alla",
+      "employment": "Blogger",
+      "review": "Marusya, I really want to thank you for the fantastic collaboration and help in creating my new style. Your professionalism, attention to detail, and individual approach made the process of selecting a wardrobe incredibly enjoyable for me, as long shopping trips used to stress me out."
+    },
+    "Oleksandra": {
+      "name": "Oleksandra",
+      "employment": "SMM ",
+      "review": "Thank you for the collaboration, Marina. It was an amazing experience. A true professional, you very carefully selected the wardrobe and created a capsule. It was very easy and pleasant."
+    },
+    "Valeria": {
+      "name": "Valeria",
+      "employment": "Teacher",
+      "review": "My wardrobe used to be almost entirely black or gray, but Marusya brought color into my life) After working with her, I started seeing myself differently. She picked out clothes that feel emotionally pleasing to wear, and in these outfits, I feel like I'm in my second skin. Reaching out to her was one of the best decisions in my life!"
+    },
+    "Marina": {
+      "name": "Marina",
+      "employment": "Photographer",
+      "review": "Your advice and recommendations not only helped update my look but also boosted my confidence. Every outfit we picked out perfectly reflects my personality and lifestyle. Thank you so much for the wonderful experience, and I look forward to continuing our collaboration."
+    }
+  },
+
   "NotFound": {
     "description": "This page is not available, return to the main page and try again later",
-    "button-title": "Go Home"
+    "button-title": "Go back"
   }
 }

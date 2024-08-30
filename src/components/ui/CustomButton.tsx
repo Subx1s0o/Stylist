@@ -11,10 +11,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const CustomButton = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = "black", className, children, ...rest }, ref) => {
     const buttonClasses = clsx(
-      "py-3 px-6  text-base font-medium w-full text-center border-none",
+      "py-3 px-6  text-base font-medium w-full text-center ",
       {
-        "bg-black text-white": variant === "black",
-        "bg-white text-black ": variant === "white",
+        "bg-black text-white border-none": variant === "black",
+        "bg-white text-black border-none": variant === "white",
         "bg-transparent text-black border border-black": variant === "outline",
       },
       className
