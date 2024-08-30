@@ -1,9 +1,10 @@
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 import "@/styles/globals.css";
+import { defaultLocale } from "@/utils/config";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { Alegreya, Exo_2 } from "next/font/google";
 
 const alegreya = Alegreya({
@@ -27,23 +28,26 @@ export const metadata: Metadata = {
   },
 };
 
-// export const viewport = {
-//   width: "device-width",
-//   initialScale: 1,
-//   maximumScale: 1,
-//   userScalable: "no",
-// };
-
 export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: {
+    locale: string;
+  };
 }>) {
-  const locale = await getLocale();
+  const locale = params.locale || defaultLocale;
   const messages = await getMessages();
 
   return (
     <html lang={locale} className="h-full">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="CImznmAXTPxjKZYXpQ8wPadZfNYcpTnUpHsaqgKQfyI"
+        />
+      </head>
       <body
         className={`${alegreya.variable} ${exo_2.variable} bg-white font-alegreya text-black h-full flex flex-col`}
       >
