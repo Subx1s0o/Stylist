@@ -28,6 +28,7 @@ export default function AboutMeSection() {
                     height: "auto",
                     minHeight: "232px",
                   }}
+                  loading="lazy"
                 />
               </picture>
 
@@ -57,6 +58,7 @@ export default function AboutMeSection() {
                     height: "auto",
                     minHeight: "201px",
                   }}
+                  loading="lazy"
                 />
               </picture>
               <RectangleIcon className="absolute -top-2 -left-2 rotate-[270deg]" />

@@ -37,10 +37,12 @@ export default function ReviewsSection() {
                       media="(min-resolution): 2dppx"
                     />
                     <Image
+                      className="swiper-lazy"
                       src={slide.photo}
                       alt={t(`${slide.translateCode}.name`)}
                       width={56}
                       height={56}
+                      loading="lazy"
                     />
                   </picture>
                   <div className="flex flex-col">
