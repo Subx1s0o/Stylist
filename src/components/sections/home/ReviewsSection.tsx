@@ -5,8 +5,10 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 export default function ReviewsSection() {
   const t = useTranslations("Reviews");
+
   return (
     <section className="pb-[60px]">
       <div className="my-container">
@@ -17,34 +19,24 @@ export default function ReviewsSection() {
             clickable: true,
             bulletClass: "swiper-pagination-bullet",
             bulletActiveClass: "swiper-pagination-bullet-active",
-            renderBullet: (_, className) => {
-              return `
-                <span class="${className} "></span>
-              `;
-            },
+            renderBullet: (_, className) => `
+                <span class="${className}"></span>
+              `,
           }}
           modules={[Pagination]}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="p-5 relative  h-full min-h-[263px] flex flex-col">
-                <RectangleIcon className="absolute top-0 right-0 " />
+              <div className="p-5 relative h-full min-h-[263px] flex flex-col">
+                <RectangleIcon className="absolute top-0 right-0" />
                 <RectangleIcon className="absolute bottom-0 right-0 rotate-90" />
                 <div className="flex mb-3 gap-2">
-                  <picture>
-                    <source
-                      srcSet={`${slide.better_photo} 2x`}
-                      media="(min-resolution): 2dppx"
-                    />
-                    <Image
-                      className="swiper-lazy"
-                      src={slide.photo}
-                      alt={t(`${slide.translateCode}.name`)}
-                      width={56}
-                      height={56}
-                      loading="lazy"
-                    />
-                  </picture>
+                  <Image
+                    src={slide.photo}
+                    alt={t(`${slide.translateCode}.name`)}
+                    width={56}
+                    height={56}
+                  />
                   <div className="flex flex-col">
                     <h3 className="text-base font-exo2">
                       {t(`${slide.translateCode}.name`)}
@@ -61,7 +53,7 @@ export default function ReviewsSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="swiper-pagination  flex justify-center mt-[60px]"></div>
+        <div className="swiper-pagination flex justify-center mt-[60px]"></div>
       </div>
     </section>
   );

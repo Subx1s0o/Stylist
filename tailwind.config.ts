@@ -42,6 +42,13 @@ export default {
             lineHeight: "38.4px",
           },
         ],
+        smd: [
+          "16px",
+          {
+            fontWeight: 400,
+            lineHeight: "22.4px",
+          },
+        ],
         base: [
           "20px",
           {

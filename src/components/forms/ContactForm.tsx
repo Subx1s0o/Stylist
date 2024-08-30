@@ -52,7 +52,7 @@ export default function ContactForm({ t }: ContactFormProps) {
         <label>
           <input
             placeholder={t("form.placeholders.name")}
-            className={`bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white text-white duration-200 outline-none border-b-2 transition-colors text-sm ${
+            className={`bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white text-white duration-200 outline-none border-b-2 transition-colors text-smd ${
               errors.name
                 ? isSmallScreen
                   ? "border-b-red-500"
@@ -74,7 +74,7 @@ export default function ContactForm({ t }: ContactFormProps) {
           />
           {errors.name && !isSmallScreen && (
             <div className="mt-1 ml-3">
-              <p className="text-error text-sm">{errors.name.message}</p>
+              <p className="text-error text-smd">{errors.name.message}</p>
             </div>
           )}
         </label>
@@ -83,7 +83,7 @@ export default function ContactForm({ t }: ContactFormProps) {
         <label>
           <input
             placeholder={t("form.placeholders.email")}
-            className={`bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white transition-color duration-200 text-white outline-none border-b-2 text-sm ${
+            className={`bg-transparent rounded-none w-full py-[6px] px-3 placeholder:text-white transition-color duration-200 text-white outline-none border-b-2 text-smd ${
               errors.email
                 ? isSmallScreen
                   ? "border-b-red-500"
@@ -105,7 +105,7 @@ export default function ContactForm({ t }: ContactFormProps) {
           />
           {errors.email && !isSmallScreen && (
             <div className="mt-1 ml-3">
-              <p className="text-error text-sm">{errors.email.message}</p>
+              <p className="text-error text-smd">{errors.email.message}</p>
             </div>
           )}
         </label>
@@ -114,7 +114,7 @@ export default function ContactForm({ t }: ContactFormProps) {
         <label>
           <input
             placeholder={t("form.placeholders.link")}
-            className={`bg-transparent w-full py-[6px] px-3 placeholder:text-white transition-colors duration-200 text-white outline-none border-b-2 rounded-none text-sm ${
+            className={`bg-transparent w-full py-[6px] px-3 placeholder:text-white transition-colors duration-200 text-white outline-none border-b-2 rounded-none text-smd ${
               errors.link
                 ? isSmallScreen
                   ? "border-b-red-500"
