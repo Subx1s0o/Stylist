@@ -8,6 +8,9 @@ export default {
         xs: "340px",
         sm: "375px",
       },
+      spacing: {
+        section: "60px",
+      },
       fontFamily: {
         exo2: ["var(--font-exo_2)", "sans-serif"],
         alegreya: ["var(--font-alegreya)", "serif"],

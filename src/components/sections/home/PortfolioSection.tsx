@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function PortfolioSection() {
   const t = useTranslations("Home.portfolio");
   return (
-    <section className="pb-[60px]">
+    <section className="pb-section">
       <div className="my-container">
         <h2 className="text-md font-exo2 text-center mb-5">{t("title")}</h2>
         <p className="mb-3 text-sm">{t("description")}</p>

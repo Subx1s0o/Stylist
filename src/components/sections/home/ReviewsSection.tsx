@@ -10,7 +10,7 @@ export default function ReviewsSection() {
   const t = useTranslations("Reviews");
 
   return (
-    <section className="pb-[60px]">
+    <section className="pb-section">
       <div className="my-container">
         <Swiper
           spaceBetween={50}
@@ -54,7 +54,7 @@ export default function ReviewsSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="swiper-pagination flex justify-center mt-[60px]"></div>
+        <div className="swiper-pagination flex justify-center mt-section"></div>
       </div>
     </section>
   );

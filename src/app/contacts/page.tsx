@@ -6,11 +6,11 @@ export default function ContactsPage() {
   const t = useTranslations("Contacts");
 
   return (
-    <section className="pb-[60px]">
+    <section className="pb-section">
       <div className="my-container">
-        <h2 className="text-md my-5 font-exo2 text-center">{t("title")}</h2>
+        <h2 className="text-md my-5 font-exo2 text-center ">{t("title")}</h2>
         <p className="text-sm mb-2">{t("first-description")}</p>
-        <p className="text-sm mb-5">{t("second-description")}</p>
+        <p className="text-sm mb-5 max-w-[340px]">{t("second-description")}</p>
       </div>
 
       <div className="relative">
