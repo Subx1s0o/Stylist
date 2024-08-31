@@ -16,10 +16,10 @@ export async function generateMetadata(): Promise<Metadata> {
     description: metadata.description,
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_PRODUCTION_URL}`),
     alternates: {
-      canonical: "/contacts",
+      canonical: locale === "uk" ? "/contacts" : `/${locale}/contacts`,
       languages: {
         en: "/en/contacts",
-        uk: "/uk/contacts",
+        uk: "/contacts",
       },
     },
     openGraph: metadata.openGraph,
