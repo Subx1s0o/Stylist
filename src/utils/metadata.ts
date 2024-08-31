@@ -6,7 +6,7 @@ export const homeMetadataConfig: MetadataConfig = {
     description:
       "Discover my premium styling and makeup services. Explore my portfolio and see how I can enhance your look with personalized recommendations.",
     openGraph: {
-      title: "Stylist Marina",
+      title: "Marina - Professional Stylist",
       description:
         "Discover my premium styling and makeup services. Explore my portfolio and see how I can enhance your look with personalized recommendations.",
       images: "/og-image.jpg",
@@ -17,7 +17,7 @@ export const homeMetadataConfig: MetadataConfig = {
     description:
       "Ознайомтеся з моїми преміум послугами стилізації та макіяжу. Перегляньте моє портфоліо та дізнайтеся, як я можу покращити ваш вигляд з індивідуальними рекомендаціями.",
     openGraph: {
-      title: "Стиліст Марина",
+      title: "Марина - Професійний стиліст",
       description:
         "Ознайомтеся з моїми преміум послугами стилізації та макіяжу. Перегляньте моє портфоліо та дізнайтеся, як я можу покращити ваш вигляд з індивідуальними рекомендаціями.",
       images: "/og-image.jpg",
