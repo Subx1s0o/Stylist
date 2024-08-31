@@ -1,5 +1,6 @@
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
+import Providers from "@/components/common/Providers";
 import "@/styles/globals.css";
 import { defaultLocale } from "@/utils/config";
 import { homeMetadataConfig } from "@/utils/metadata";
@@ -60,9 +61,11 @@ export default async function RootLayout({
         className={`${alegreya.variable} ${exo_2.variable} bg-white font-alegreya text-black h-full flex flex-col`}
       >
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1  ">{children}</main>
-          <Footer />
+          <Providers>
+            <Header />
+            <main className="flex-1  ">{children}</main>
+            <Footer />
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>
