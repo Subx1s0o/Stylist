@@ -16,9 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "/services",
       languages: {
-        "en-US": "/en/services",
-        "en-GB": "/en/services",
-        "uk-UA": "/uk/services",
+        en: "/en/services",
+        uk: "/uk/services",
       },
     },
     openGraph: metadata.openGraph,

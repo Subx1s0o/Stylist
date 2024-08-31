@@ -1,6 +1,8 @@
+"use client";
 import { Locale } from "@/utils/config";
 import { setUserLocale } from "@/utils/locale";
 import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 
 interface Props {
   closeMenu: () => void;
@@ -8,11 +10,16 @@ interface Props {
 
 export default function MobileLocaleSwitcher({ closeMenu }: Props) {
   const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const cleanedPathname = pathname.replace(/^\/(uk|en)/, "");
 
   const changeLocale = (value: string): void => {
     const newLocale = value as Locale;
     if (newLocale === locale) return;
+    const newPathname = `/${newLocale}${cleanedPathname}`;
     setUserLocale(newLocale);
+    router.replace(newPathname);
     closeMenu();
   };
   return (

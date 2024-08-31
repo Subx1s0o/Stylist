@@ -18,9 +18,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "/contacts",
       languages: {
-        "en-US": "/en/contacts",
-        "en-GB": "/en/contacts",
-        "uk-UA": "/uk/contacts",
+        en: "/en/contacts",
+        uk: "/uk/contacts",
       },
     },
     openGraph: metadata.openGraph,

@@ -84,7 +84,7 @@ export const notFoundMetadataConfig: MetadataConfig = {
       title: "Page Not Found - Stylist Marina",
       description:
         "Oops! The page you’re looking for doesn’t exist. Return to the homepage or explore my personal styling and makeup services to find out how I can help you enhance your look.",
-      images: "/og-image.jpg", // Use your actual image URL
+      images: "/og-image.jpg",
     },
   },
   uk: {
@@ -95,7 +95,7 @@ export const notFoundMetadataConfig: MetadataConfig = {
       title: "Сторінка не знайдена - Стиліст Марина",
       description:
         "Ой! Сторінка, яку ви шукаєте, не існує. Поверніться на головну сторінку або досліджуйте мої послуги з персонального стилю та макіяжу, щоб дізнатися, як я можу допомогти вам покращити ваш вигляд.",
-      images: "/og-image.jpg", // Use your actual image URL
+      images: "/og-image.jpg",
     },
   },
 };

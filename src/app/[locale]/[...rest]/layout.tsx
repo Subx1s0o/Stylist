@@ -1,4 +1,4 @@
-import { defaultLocale } from "@/utils/config";
+import { defaultLocale, Locale } from "@/utils/config";
 import { notFoundMetadataConfig } from "@/utils/metadata";
 import { Metadata } from "next";
 import { getLocale } from "next-intl/server";
@@ -18,11 +18,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: {
+    locale: Locale;
+  };
 }) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>{children}</body>
     </html>
   );

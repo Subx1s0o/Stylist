@@ -33,9 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "/",
       languages: {
-        "en-US": "/en",
-        "en-GB": "/en",
-        "uk-UA": "/uk",
+        en: "/en",
+        uk: "/uk",
       },
     },
     openGraph: metadata.openGraph,
@@ -46,7 +45,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = (await getLocale()) || defaultLocale;
+  const locale = await getLocale();
   const messages = await getMessages();
 
   return (
