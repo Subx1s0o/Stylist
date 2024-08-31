@@ -10,11 +10,11 @@ export default function MobileLocaleSwitcher({ closeMenu }: Props) {
   const locale = useLocale();
 
   const changeLocale = (value: string): void => {
-    const locale = value as Locale;
-    setUserLocale(locale);
+    const newLocale = value as Locale;
+    if (newLocale === locale) return;
+    setUserLocale(newLocale);
     closeMenu();
   };
-
   return (
     <div className="flex gap-2 justify-center">
       <button

@@ -1,4 +1,28 @@
 import ServicesSection from "@/components/sections/home/ServicesSection";
+import { defaultLocale } from "@/utils/config";
+import { servicesMetadataConfig } from "@/utils/metadata";
+import { Metadata } from "next";
+import { getLocale } from "next-intl/server";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) || defaultLocale;
+  const metadata =
+    servicesMetadataConfig[locale] || servicesMetadataConfig[defaultLocale];
+
+  return {
+    title: metadata.title,
+    metadataBase: new URL(`${process.env.NEXT_PUBLIC_PRODUCTION_URL}`),
+    alternates: {
+      canonical: "/services",
+      languages: {
+        "en-US": "/en/services",
+        "en-GB": "/en/services",
+        "uk-UA": "/uk/services",
+      },
+    },
+    openGraph: metadata.openGraph,
+  };
+}
 
 export default function ServicesPage() {
   return <ServicesSection className="pt-5" />;
