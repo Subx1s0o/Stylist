@@ -27,10 +27,8 @@ export async function generateMetadata(): Promise<Metadata> {
     homeMetadataConfig[locale] || homeMetadataConfig[defaultLocale];
 
   return {
-    title: {
-      default: metadata.title,
-      template: `%s - ${metadata.title}`,
-    },
+    title: metadata.title,
+    description: metadata.description,
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_PRODUCTION_URL}`),
     alternates: {
       canonical: "/",

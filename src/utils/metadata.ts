@@ -2,20 +2,24 @@ import { MetadataConfig } from "@/types/metadata.types";
 
 export const homeMetadataConfig: MetadataConfig = {
   en: {
-    title: "Stylist Marina",
-    description: "Discover our services and portfolio.",
+    title: "Marina - Professional Stylist ",
+    description:
+      "Discover my premium styling and makeup services. Explore my portfolio and see how I can enhance your look with personalized recommendations.",
     openGraph: {
       title: "Stylist Marina",
-      description: "Discover our services and portfolio.",
+      description:
+        "Discover my premium styling and makeup services. Explore my portfolio and see how I can enhance your look with personalized recommendations.",
       images: "/og-image.jpg",
     },
   },
   uk: {
-    title: "Стиліст Марина",
-    description: "Ознайомтеся з нашими послугами та портфоліо.",
+    title: "Марина - Професійний стиліст",
+    description:
+      "Ознайомтеся з моїми преміум послугами стилізації та макіяжу. Перегляньте моє портфоліо та дізнайтеся, як я можу покращити ваш вигляд з індивідуальними рекомендаціями.",
     openGraph: {
       title: "Стиліст Марина",
-      description: "Ознайомтеся з нашими послугами та портфоліо.",
+      description:
+        "Ознайомтеся з моїми преміум послугами стилізації та макіяжу. Перегляньте моє портфоліо та дізнайтеся, як я можу покращити ваш вигляд з індивідуальними рекомендаціями.",
       images: "/og-image.jpg",
     },
   },
@@ -23,24 +27,24 @@ export const homeMetadataConfig: MetadataConfig = {
 
 export const servicesMetadataConfig: MetadataConfig = {
   en: {
-    title: "Services",
+    title: "My Services - Personal Styling and Makeup",
     description:
-      "Choose from our personal styling or professional makeup services. Get personalized recommendations and a flawless look for any occasion.",
+      "Explore my personal styling and professional makeup services. Receive tailored recommendations and achieve a perfect look for any occasion with me.",
     openGraph: {
       title: "Services - Stylist Marina",
       description:
-        "Choose from our personal styling or professional makeup services. Get personalized recommendations and a flawless look for any occasion.",
+        "Explore my personal styling and professional makeup services. Receive tailored recommendations and achieve a perfect look for any occasion with me.",
       images: "/og-image.jpg",
     },
   },
   uk: {
-    title: "Послуги",
+    title: "Мої Послуги - Персональний стиль та макіяж ",
     description:
-      "Оберіть послугу: персональний стиль для створення ідеального образу або професійний макіяж для будь-якої події. Отримайте індивідуальні рекомендації та бездоганний вигляд для кожного дня.",
+      "Досліджуйте мої послуги персонального стилю та професійного макіяжу. Отримайте індивідуальні рекомендації та досягніть ідеального вигляду для будь-якої події разом зі мною.",
     openGraph: {
       title: "Послуги - Стиліст Марина",
       description:
-        "Оберіть послугу: персональний стиль для створення ідеального образу або професійний макіяж для будь-якої події. Отримайте індивідуальні рекомендації та бездоганний вигляд для кожного дня.",
+        "Досліджуйте мої послуги персонального стилю та професійного макіяжу. Отримайте індивідуальні рекомендації та досягніть ідеального вигляду для будь-якої події разом зі мною.",
       images: "/og-image.jpg",
     },
   },
@@ -48,25 +52,50 @@ export const servicesMetadataConfig: MetadataConfig = {
 
 export const contactsMetadataConfig: MetadataConfig = {
   en: {
-    title: "Contacts",
+    title: "Contact Me - Schedule Your Consultation ",
     description:
-      "Get in touch with us to schedule a consultation. Whether you need personal styling or professional makeup advice, I`m here to help you achieve your desired look. Reach out via email, phone, or our online contact form.",
+      "Contact me to schedule a consultation for personal styling or professional makeup. Reach out via email, phone, or my online form to get expert advice and achieve your desired look.",
     openGraph: {
       title: "Contacts - Stylist Marina",
       description:
-        "Get in touch with us to schedule a consultation. Whether you need personal styling or professional makeup advice, I`m are here to help you achieve your desired look. Reach out via email, phone, or our online contact form.",
+        "Contact me to schedule a consultation for personal styling or professional makeup. Reach out via email, phone, or my online form to get expert advice and achieve your desired look.",
       images: "/og-image.jpg",
     },
   },
   uk: {
-    title: "Контакти",
+    title: "Контакти - Запишіться на консультацію ",
     description:
-      "Зв'яжіться з нами, щоб записатися на консультацію. Якщо вам потрібен персональний стиль або професійна консультація з макіяжу, я готова допомогти вам досягти бажаного вигляду. Зв'яжіться з нами по електронній пошті, телефону або через онлайн форму контактів.",
+      "Зв'яжіться зі мною, щоб записатися на консультацію з персонального стилю або професійного макіяжу. Напишіть мені на електронну пошту, зателефонуйте або скористайтеся моєю онлайн формою для отримання експертних порад та досягнення бажаного вигляду.",
     openGraph: {
       title: "Контакти - Стиліст Марина",
       description:
-        "Зв'яжіться з нами, щоб записатися на консультацію. Якщо вам потрібен персональний стиль або професійна консультація з макіяжу, я готова допомогти вам досягти бажаного вигляду. Зв'яжіться з нами по електронній пошті, телефону або через онлайн форму контактів.",
+        "Зв'яжіться зі мною, щоб записатися на консультацію з персонального стилю або професійного макіяжу. Напишіть мені на електронну пошту, зателефонуйте або скористайтеся моєю онлайн формою для отримання експертних порад та досягнення бажаного вигляду.",
       images: "/og-image.jpg",
+    },
+  },
+};
+
+export const notFoundMetadataConfig: MetadataConfig = {
+  en: {
+    title: "Page Not Found - Stylist Marina",
+    description:
+      "Oops! The page you’re looking for doesn’t exist. Return to the homepage or explore my personal styling and makeup services to find out how I can help you enhance your look.",
+    openGraph: {
+      title: "Page Not Found - Stylist Marina",
+      description:
+        "Oops! The page you’re looking for doesn’t exist. Return to the homepage or explore my personal styling and makeup services to find out how I can help you enhance your look.",
+      images: "/og-image.jpg", // Use your actual image URL
+    },
+  },
+  uk: {
+    title: "Сторінка не знайдена - Стиліст Марина",
+    description:
+      "Ой! Сторінка, яку ви шукаєте, не існує. Поверніться на головну сторінку або досліджуйте мої послуги з персонального стилю та макіяжу, щоб дізнатися, як я можу допомогти вам покращити ваш вигляд.",
+    openGraph: {
+      title: "Сторінка не знайдена - Стиліст Марина",
+      description:
+        "Ой! Сторінка, яку ви шукаєте, не існує. Поверніться на головну сторінку або досліджуйте мої послуги з персонального стилю та макіяжу, щоб дізнатися, як я можу допомогти вам покращити ваш вигляд.",
+      images: "/og-image.jpg", // Use your actual image URL
     },
   },
 };

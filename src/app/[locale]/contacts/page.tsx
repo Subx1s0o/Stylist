@@ -13,6 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: metadata.title,
+    description: metadata.description,
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_PRODUCTION_URL}`),
     alternates: {
       canonical: "/contacts",
