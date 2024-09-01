@@ -30,7 +30,7 @@ export default function ContactsPage() {
   const t = useTranslations("Contacts");
 
   return (
-    <section className="pb-section">
+    <section className="pb-section pt-[48px]">
       <div className="my-container">
         <h2 className="text-md my-5 font-exo2 text-center ">{t("title")}</h2>
         <p className="text-sm mb-2">{t("first-description")}</p>

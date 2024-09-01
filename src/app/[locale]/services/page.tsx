@@ -25,5 +25,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function ServicesPage() {
-  return <ServicesSection className="pt-5" />;
+  return <ServicesSection className="pt-[68px]" />;
 }

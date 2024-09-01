@@ -19,7 +19,7 @@ export default function NotFound() {
   };
 
   return (
-    <div className="my-container my-auto pt-[232px] pb-[200px]">
+    <div className="my-container my-auto pt-[280px] pb-[200px] ">
       <h1 className="font-exo2 text-xl text-center mb-5">404</h1>
       <p className="font-exo2 text-base text-center mb-section">
         {t("description")}
