@@ -26,16 +26,18 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-col max-w-[187px] gap-3">
-            {socialLinks.map(({ href, label, icon: Icon }) => (
-              <li key={label} className="flex items-center gap-2">
-                <a className="text-sm flex items-center gap-2" href={href}>
-                  <Icon width={24} height={24} />
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <address>
+            <ul className="flex flex-col max-w-[187px] gap-3">
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <li key={label} className="flex items-center gap-2">
+                  <a className="text-sm flex items-center gap-2" href={href}>
+                    <Icon width={24} height={24} />
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </address>
         </nav>
         <p className="py-2">© 2024</p>
       </div>
