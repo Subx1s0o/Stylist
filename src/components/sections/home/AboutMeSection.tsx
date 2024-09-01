@@ -31,8 +31,8 @@ export default function AboutMeSection() {
                 />
               </picture>
 
-              <RectangleIcon className="absolute -top-2 -right-2" />
-              <RectangleIcon className="absolute -bottom-2 -right-2 rotate-90" />
+              <RectangleIcon className="absolute -top-xs -right-xs" />
+              <RectangleIcon className="absolute -bottom-xs -right-xs rotate-90" />
             </div>
 
             <p className="text-sm max-w-[153px]">{t("second-text")}</p>
@@ -59,8 +59,8 @@ export default function AboutMeSection() {
                   }}
                 />
               </picture>
-              <RectangleIcon className="absolute -top-2 -left-2 rotate-[270deg]" />
-              <RectangleIcon className="absolute -bottom-2 -left-2 rotate-180" />
+              <RectangleIcon className="absolute -top-xs -left-xs rotate-[270deg]" />
+              <RectangleIcon className="absolute -bottom-xs -left-xs rotate-180" />
             </div>
           </li>
         </ul>

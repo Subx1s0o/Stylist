@@ -1,6 +1,7 @@
 "use client";
 import CustomButton from "@/components/ui/CustomButton";
 import { useTranslations } from "next-intl";
+import { startProgress } from "next-nprogress-bar";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -12,6 +13,11 @@ export default function NotFound() {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleBack = () => {
+    startProgress();
+    router.back();
+  };
+
   return (
     <div className="my-container my-auto pt-[232px] pb-[200px]">
       <h1 className="font-exo2 text-xl text-center mb-5">404</h1>
@@ -22,7 +28,7 @@ export default function NotFound() {
         <CustomButton
           aria-label={t("button-title")}
           variant="black"
-          onClick={() => router.back()}
+          onClick={handleBack}
         >
           {t("button-title")}
         </CustomButton>

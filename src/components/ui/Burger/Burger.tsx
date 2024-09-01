@@ -1,6 +1,5 @@
 "use client";
 import BurgerIcon from "@/assets/icons/ui/burger.svg";
-import useWindowScroll from "@/hooks/useScrollCloseBurger";
 import { AnimatePresence, LazyMotion, m } from "framer-motion";
 import { useRef, useState } from "react";
 import { useClickAway } from "react-use";
@@ -14,11 +13,14 @@ export default function Burger() {
   const toggleMenu = () => setOpen((prev) => !prev);
   const ref = useRef<HTMLDivElement>(null);
   useClickAway(ref, () => setOpen(false));
-  useWindowScroll(100, closeMenu);
 
   return (
     <div ref={ref} className="relative inline-flex">
-      <button className="z-20" aria-label="Toggle Menu" onClick={toggleMenu}>
+      <button
+        className="z-20 pl-5 py-1"
+        aria-label="Toggle Menu"
+        onClick={toggleMenu}
+      >
         <BurgerIcon />
       </button>
       <LazyMotion features={loadFeatures}>

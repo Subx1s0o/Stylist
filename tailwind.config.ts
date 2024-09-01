@@ -10,6 +10,7 @@ export default {
       },
       spacing: {
         section: "60px",
+        xs: "5px",
       },
       fontFamily: {
         exo2: ["var(--font-exo_2)", "sans-serif"],

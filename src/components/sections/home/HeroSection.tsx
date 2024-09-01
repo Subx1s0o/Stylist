@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function HeroSection() {
   const t = useTranslations("Home");
   return (
-    <section className="pb-section">
+    <section className="pb-section mt-[48px]">
       <div className="relative mb-3">
         <picture>
           <source

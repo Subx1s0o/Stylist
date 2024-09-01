@@ -1,13 +1,13 @@
 import LogoIcon from "@/assets/icons/logos/Logo32.svg";
 import Burger from "@/components/ui/Burger/Burger";
-import Link from "next/link";
+import HomeLogo from "./../ui/HomeLogo";
 export default function Header() {
   return (
-    <header className="border-b border-lightGrey">
+    <header className="border-b border-lightGrey fixed z-50 bg-white w-full">
       <div className="my-container flex items-center justify-between py-2 ">
-        <Link href="/" aria-label="logotype">
+        <HomeLogo>
           <LogoIcon width={32} height={32} />
-        </Link>
+        </HomeLogo>
         <Burger />
       </div>
     </header>
