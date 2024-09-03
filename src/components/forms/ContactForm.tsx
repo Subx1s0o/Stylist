@@ -1,6 +1,7 @@
 "use client";
 import CustomButton from "@/components/ui/CustomButton";
 import { useFormTranslations } from "@/hooks/useFormTranslations";
+import axios from "axios";
 import { useLocale } from "next-intl";
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -35,13 +36,12 @@ export default function ContactForm() {
   }, [locale]);
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    return new Promise<void>((resolve) => {
-      setTimeout(() => {
-        reset();
-        resolve();
-        console.log(data);
-      }, 2000);
-    });
+    try {
+      const res = axios.post("https://formspree.io/f/xzzpzayg", data);
+      // return res.data;
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -69,7 +69,8 @@ export default function ContactForm() {
                 message: validation.nameMinLength,
               },
               pattern: {
-                value: /^[A-Za-zÀ-ÖØ-öø-ÿĀ-ž]+(?:[\s-][A-Za-zÀ-ÖØ-öø-ÿĀ-ž]+)*$/,
+                value:
+                  /^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ]+(?:[\s-][A-Za-zА-Яа-яЁёІіЇїЄєҐґ]+)*$/,
                 message: validation.namePattern,
               },
             })}
