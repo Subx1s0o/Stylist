@@ -13,10 +13,9 @@ type FormValues = {
 };
 
 export default function ContactForm() {
-  const { register, handleSubmit, formState, reset, trigger } =
-    useForm<FormValues>({
-      mode: "onBlur",
-    });
+  const { register, handleSubmit, formState, trigger } = useForm<FormValues>({
+    mode: "onBlur",
+  });
   const { isSubmitting, errors } = formState;
 
   const isSmallScreen = useMedia("(max-width:360px)", false);
@@ -34,7 +33,7 @@ export default function ContactForm() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [locale]);
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<FormValues> = () => {
     // try {
     //   const res = axios.post("https://formspree.io/f/xzzpzayg", data);
     //   // return res.data;
