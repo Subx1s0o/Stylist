@@ -30,7 +30,12 @@ export default function Footer() {
             <ul className="flex flex-col max-w-[187px] gap-3">
               {socialLinks.map(({ href, label, icon: Icon }) => (
                 <li key={label} className="flex items-center gap-2">
-                  <a className="text-sm flex items-center gap-2" href={href}>
+                  <a
+                    className="text-sm flex items-center gap-2"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Icon width={24} height={24} />
                     {label}
                   </a>
