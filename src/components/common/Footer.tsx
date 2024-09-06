@@ -15,7 +15,7 @@ export default function Footer() {
         </HomeLogo>
         <nav className=" w-full flex flex-col gap-6 items-center">
           <ul className="flex flex-col gap-1 w-full ">
-            {links.slice(0, 3).map(({ href, key }) => (
+            {links.slice(0, 2).map(({ href, key }) => (
               <li key={key}>
                 <Link
                   className="text-base block  text-center py-[6px] cursor-pointer w-full"
@@ -26,7 +26,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <address>
+          <address className="not-italic">
             <ul className="flex flex-col max-w-[187px] gap-3">
               {socialLinks.map(({ href, label, icon: Icon }) => (
                 <li key={label} className="flex items-center gap-2">

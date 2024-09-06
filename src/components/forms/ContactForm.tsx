@@ -1,7 +1,6 @@
 "use client";
 import CustomButton from "@/components/ui/CustomButton";
 import { useFormTranslations } from "@/hooks/useFormTranslations";
-import axios from "axios";
 import { useLocale } from "next-intl";
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -36,12 +35,12 @@ export default function ContactForm() {
   }, [locale]);
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    try {
-      const res = axios.post("https://formspree.io/f/xzzpzayg", data);
-      // return res.data;
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const res = axios.post("https://formspree.io/f/xzzpzayg", data);
+    //   // return res.data;
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (
