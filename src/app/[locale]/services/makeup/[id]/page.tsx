@@ -98,7 +98,7 @@ export default function MakeupDetailsPage({
                     <span className="font-medium">
                       {t("conditions.price")}:{" "}
                     </span>
-                    {/* {service.price} */} €
+                    {service.price} €
                   </p>
                 </li>
               </ul>
