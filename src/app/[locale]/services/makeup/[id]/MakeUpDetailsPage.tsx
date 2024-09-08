@@ -28,22 +28,27 @@ export default function MakeupDetailsPage({
                 <li>
                   <Link href="/services">{t("breadcrumbs.first-link")}</Link>
                 </li>
-                <span>&nbsp;/&nbsp;</span>
+                <li>
+                  <span>&nbsp;/&nbsp;</span>
+                </li>
                 <li>
                   <Link href="/services/makeup">
                     {t("breadcrumbs.second-link")}
                   </Link>
                 </li>
-                <span>&nbsp;/&nbsp;</span>
+                <li>
+                  <span>&nbsp;/&nbsp;</span>
+                </li>
                 <li>
                   <Link href={`/services/makeup/${service._id}`}>{title}</Link>
                 </li>
               </ul>
             </nav>
             <div
-              className={`relative w-full aspect-[343/371] overflow-hidden ${
+              className={`relative w-full overflow-hidden ${
                 service.attention ? "mb-3" : "mb-5"
               }`}
+              style={{ aspectRatio: "343 / 371" }}
             >
               <Image
                 src={service.imageUrl}

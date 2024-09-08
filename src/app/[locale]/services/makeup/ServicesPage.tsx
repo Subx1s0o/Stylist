@@ -49,7 +49,9 @@ export default function ServicesPage({ services, locale }: ServicesPageProps) {
           <li>
             <Link href="/services">{t("breadcrumbs.first-link")}</Link>
           </li>
-          <span>&nbsp;/&nbsp;</span>
+          <li>
+            <span>&nbsp;/&nbsp;</span>
+          </li>
           <li>
             <Link href="/services/makeup">{t("breadcrumbs.second-link")}</Link>
           </li>
@@ -83,6 +85,7 @@ export default function ServicesPage({ services, locale }: ServicesPageProps) {
                   sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
                   style={{ objectFit: "cover" }}
                   priority
+                  quality={70}
                 />
               </div>
             )}
