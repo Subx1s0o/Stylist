@@ -98,6 +98,56 @@
     }
   },
 
+  "Makeup": {
+    "title": "Makeup",
+    "breadcrumbs": {
+      "first-link": "Services",
+      "second-link": "Makeup"
+    }
+  },
+  "Style": {
+    "title": "Style",
+    "breadcrumbs": {
+      "first-link": "Services",
+      "second-link": "Style"
+    }
+  },
+
+  "ServicePage": {
+    "Makeup": {
+      "breadcrumbs": {
+        "first-link": "Services",
+        "second-link": "Makeup"
+      },
+      "conditions": {
+        "title": "Conditions",
+        "duration_work": "Work Duration",
+        "duration_consultation": "Consultation Duration",
+        "format": "Format",
+        "price": "Price"
+      },
+      "result": {
+        "title": "Result"
+      }
+    },
+    "Style": {
+      "breadcrumbs": {
+        "first-link": "Services",
+        "second-link": "Style"
+      },
+      "conditions": {
+        "title": "Conditions",
+        "duration_work": "Work Duration",
+        "duration_consultation": "Consultation Duration",
+        "format": "Format",
+        "price": "Price"
+      },
+      "result": {
+        "title": "Result"
+      }
+    }
+  },
+
   "NotFound": {
     "description": "This page is not available. Please return to the previous page and try again later.",
     "button-title": "Go back"

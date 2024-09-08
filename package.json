@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^14.2.6",
     "axios": "^1.7.7",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.30",
@@ -24,6 +23,7 @@
     "swiper": "^11.1.10"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.8",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
