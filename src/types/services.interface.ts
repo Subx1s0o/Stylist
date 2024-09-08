@@ -1,26 +1,16 @@
+type Translations = {
+  uk: string;
+  en: string;
+};
+
 export interface Service {
   _id: string;
-  title: {
-    uk: string;
-    en: string;
-  };
-  result: {
-    uk: string;
-    en: string;
-  };
+  title: Translations;
+  result: Translations;
   imageUrl: string;
-  attention?: {
-    uk: string;
-    en: string;
-  };
-  duration_work: {
-    uk: string;
-    en: string;
-  };
-  duration_consultation: {
-    uk: string;
-    en: string;
-  };
+  attention?: Translations;
+  duration_work: Translations;
+  duration_consultation?: Translations;
   format: string;
   price: number;
 }
