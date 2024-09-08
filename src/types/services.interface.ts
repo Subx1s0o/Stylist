@@ -13,4 +13,12 @@ export interface Service {
   duration_consultation?: Translations;
   format: string;
   price: number;
+  stages?: {
+    1?: Translations;
+    2?: Translations;
+    3?: Translations;
+    4?: Translations;
+    5?: Translations;
+    6?: Translations;
+  };
 }

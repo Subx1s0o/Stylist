@@ -130,7 +130,8 @@
       },
       "result": {
         "title": "Result"
-      }
+      },
+      "stages": "Stages"
     },
     "Style": {
       "breadcrumbs": {
@@ -146,7 +147,8 @@
       },
       "result": {
         "title": "Result"
-      }
+      },
+      "stages": "Stages"
     }
   },
 

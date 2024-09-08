@@ -65,7 +65,9 @@ export default function MakeupDetailsPage({
                 <ul className="flex gap-3 items-center">
                   <li className="font-exo2 text-xmd">!</li>
                   <li>
-                    <p className="text-sm ">{service.attention[locale]}</p>
+                    <small className="text-sm ">
+                      {service.attention[locale]}
+                    </small>
                   </li>
                 </ul>
               </div>
@@ -111,6 +113,59 @@ export default function MakeupDetailsPage({
                 </li>
               </ul>
             </div>
+            {service.stages && (
+              <>
+                <h2 className="text-base text-center font-exo2 mb-3">
+                  {t("stages")}
+                </h2>
+                <div className="relative mb-5">
+                  <ul className="flex flex-col gap-[22px] relative">
+                    {Object.entries(service.stages).map(
+                      ([key, value], index) => (
+                        <li key={key} className="relative flex items-center">
+                          <div className="relative size-5 flex items-center justify-center rounded-full bg-black">
+                            <small className="absolute flex items-center justify-center  inset-0 font-exo2 text-xxs  text-white font-bold">
+                              {index + 1}
+                            </small>
+                          </div>
+                          <small className="mx-[6px] text-md font-exo2 leading-[0%]">
+                            <svg
+                              width="20px"
+                              height="20px"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <path
+                                  d="M4 12H20M20 12L16 8M20 12L16 16"
+                                  stroke="#000000"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </g>
+                            </svg>
+                          </small>
+                          <div className="flex-1 ">
+                            <p className="text-sm font-exo2 ">
+                              {value[locale]}
+                            </p>
+                          </div>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </div>
+              </>
+            )}
+
             <div>
               <h2 className="text-center mb-3 text-base font-exo2">
                 {t("result.title")}

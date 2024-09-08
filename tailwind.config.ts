@@ -81,6 +81,7 @@ export default {
             lineHeight: "20px",
           },
         ],
+        xxs: "10px",
       },
     },
   },
