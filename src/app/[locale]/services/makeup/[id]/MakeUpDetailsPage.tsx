@@ -55,9 +55,11 @@ export default function MakeupDetailsPage({
                 alt={title}
                 fill
                 priority
-                className="absolute inset-0"
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
               />
             </div>
+
             {service.attention && (
               <div className="border border-darkGrey p-2 mb-5">
                 <ul className="flex gap-3 items-center">

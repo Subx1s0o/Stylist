@@ -4,6 +4,7 @@ import CustomLink from "@/components/ui/CustomLink";
 import { Service } from "@/types/services.interface";
 import { Locale } from "@/utils/config";
 import { loadMoreServices } from "@/utils/loadMoreServices";
+import { LazyMotion, m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +26,11 @@ export default function ServicesPage({ services, locale }: ServicesPageProps) {
     totalPages: number;
   }>(services);
   const [totalPages, setTotalPages] = useState<number>(services.totalPages);
+  const [imageLoaded, setImageLoaded] = useState<Record<string, boolean>>({});
   const t = useTranslations("Makeup");
+
+  const loadFeatures = () =>
+    import("@/utils/framer.ts").then((res) => res.default);
 
   useEffect(() => {
     setTotalPages(services.totalPages);
@@ -39,6 +44,10 @@ export default function ServicesPage({ services, locale }: ServicesPageProps) {
       "makeup"
     );
     setCurrentPage(newPage);
+  };
+
+  const handleImageLoad = (id: string) => {
+    setImageLoaded((prev) => ({ ...prev, [id]: true }));
   };
 
   return (
@@ -58,39 +67,52 @@ export default function ServicesPage({ services, locale }: ServicesPageProps) {
         </ul>
       </nav>
       <ul className="flex flex-col gap-7">
-        {currentServices.services.map((service, number) => (
-          <li className="grid grid-cols-2 gap-2" key={service._id}>
-            <div className="overflow-hidden">
-              <h2 className="text-base font-exo2 mb-2">
-                #{number + 1} {service.title[locale]}
-              </h2>
-              <p className="text-sm line-clamp-3 mb-[46px]">
-                {service.result[locale]}
-              </p>
-              <CustomLink
-                className="max-w-[127px]"
-                variant="outline"
-                href={`/services/makeup/${service._id}`}
-              >
-                {t("button")}
-              </CustomLink>
-            </div>
-
-            {service.imageUrl && (
-              <div className="relative w-full max-h-[300px] h-auto">
-                <Image
-                  src={service.imageUrl}
-                  alt={service.title[locale]}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
-                  style={{ objectFit: "cover" }}
-                  priority
-                  quality={70}
-                />
+        <LazyMotion features={loadFeatures}>
+          {currentServices.services.map((service, number) => (
+            <m.li
+              className="grid grid-cols-2 gap-2"
+              key={service._id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={
+                imageLoaded[service._id]
+                  ? { opacity: 1, y: 0 }
+                  : { opacity: 0, y: 20 }
+              }
+              transition={{ duration: 0.5, delay: number * 0.1 }}
+            >
+              <div className="overflow-hidden">
+                <h2 className="text-base font-exo2 mb-2">
+                  #{number + 1} {service.title[locale]}
+                </h2>
+                <p className="text-sm line-clamp-3 mb-[46px]">
+                  {service.result[locale]}
+                </p>
+                <CustomLink
+                  className="max-w-[127px]"
+                  variant="outline"
+                  href={`/services/makeup/${service._id}`}
+                >
+                  {t("button")}
+                </CustomLink>
               </div>
-            )}
-          </li>
-        ))}
+
+              {service.imageUrl && (
+                <div className="relative w-full max-h-[300px] h-auto">
+                  <Image
+                    src={service.imageUrl}
+                    alt={service.title[locale]}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+                    style={{ objectFit: "cover" }}
+                    priority
+                    quality={70}
+                    onLoad={() => handleImageLoad(service._id)}
+                  />
+                </div>
+              )}
+            </m.li>
+          ))}
+        </LazyMotion>
       </ul>
 
       {currentPage < totalPages && (
