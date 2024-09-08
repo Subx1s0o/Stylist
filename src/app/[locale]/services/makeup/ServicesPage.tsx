@@ -70,7 +70,7 @@ export default function ServicesPage({ services, locale }: ServicesPageProps) {
                 variant="outline"
                 href={`/services/makeup/${service._id}`}
               >
-                Детальніше
+                {t("button")}
               </CustomLink>
             </div>
 

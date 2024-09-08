@@ -103,14 +103,16 @@
     "breadcrumbs": {
       "first-link": "Послуги",
       "second-link": "Візаж"
-    }
+    },
+    "button": "Детальніше"
   },
   "Style": {
     "title": "Стиль",
     "breadcrumbs": {
       "first-link": "Послуги",
       "second-link": "Стиль"
-    }
+    },
+    "button": "Детальніше"
   },
 
   "ServicePage": {

@@ -103,14 +103,16 @@
     "breadcrumbs": {
       "first-link": "Services",
       "second-link": "Makeup"
-    }
+    },
+    "button": "More Details"
   },
   "Style": {
     "title": "Style",
     "breadcrumbs": {
       "first-link": "Services",
       "second-link": "Style"
-    }
+    },
+    "button": "More Details"
   },
 
   "ServicePage": {

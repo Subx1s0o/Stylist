@@ -1,5 +1,6 @@
 import AdviceSection from "@/components/sections/home/AdviceSection";
 import { Service } from "@/types/services.interface";
+import { Locale } from "@/utils/config";
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -10,7 +11,7 @@ export default function MakeupDetailsPage({
   locale,
 }: {
   service: Service;
-  locale: "uk" | "en";
+  locale: Locale;
 }) {
   const t = useTranslations("ServicePage.Makeup");
 
