@@ -54,6 +54,7 @@ export default function ServiceCard({
           quality={70}
           onLoad={handleImageLoad}
           loading="eager"
+          priority
         />
       </div>
     </animated.li>
