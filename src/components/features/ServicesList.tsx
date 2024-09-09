@@ -17,13 +17,12 @@ export default function ServicesList({
 
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(services.totalPages);
-  const observerRef = useRef<HTMLDivElement | null>(null);
+  const observerRef = useRef<HTMLLIElement | null>(null);
 
   useEffect(() => {
     setTotalPages(services.totalPages);
   }, [services.totalPages]);
 
-  // Обробка IntersectionObserver для підвантаження нових елементів
   useEffect(() => {
     const observerElement = observerRef.current;
 
@@ -38,11 +37,12 @@ export default function ServicesList({
             fetchServices,
             category.toLowerCase()
           );
+
           setCurrentPage(newPage);
         }
       },
       {
-        rootMargin: "0px 0px 250px 0px", // Точка спрацювання спостерігача
+        rootMargin: "0px 0px 250px 0px",
         threshold: 0.1,
       }
     );
@@ -66,8 +66,7 @@ export default function ServicesList({
         />
       ))}
 
-      {/* Сторожовий елемент для підвантаження */}
-      <div ref={observerRef} className="h-10"></div>
+      <li ref={observerRef} className="h-10"></li>
     </ul>
   );
 }

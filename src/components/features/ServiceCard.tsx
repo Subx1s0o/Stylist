@@ -1,9 +1,9 @@
 "use client";
 
 import { ServiceCardProps } from "@/types/services.interface";
-import { motion as m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useState } from "react";
 import CustomLink from "../ui/CustomLink";
 
 export default function ServiceCard({
@@ -13,13 +13,18 @@ export default function ServiceCard({
   category,
 }: ServiceCardProps) {
   const t = useTranslations(category);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   return (
-    <m.li
-      className="grid grid-cols-2 gap-2"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: number * 0.05 }}
+    <li
+      className={`grid grid-cols-2 gap-2 ${
+        imageLoaded ? "opacity-100" : "opacity-0"
+      }`}
+      style={{ transition: "opacity 0.3s ease-in-out" }}
     >
       <div className="overflow-hidden">
         <h2 className="text-base font-exo2 mb-2">
@@ -45,8 +50,9 @@ export default function ServiceCard({
           sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
           style={{ objectFit: "cover" }}
           quality={70}
+          onLoad={handleImageLoad}
         />
       </div>
-    </m.li>
+    </li>
   );
 }
