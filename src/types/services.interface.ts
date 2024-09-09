@@ -1,3 +1,5 @@
+import { Locale } from "@/utils/config";
+
 type Translations = {
   uk: string;
   en: string;
@@ -21,4 +23,28 @@ export interface Service {
     5?: Translations;
     6?: Translations;
   };
+}
+
+export interface ServicesPageProps {
+  services: {
+    services: Service[];
+    totalPages: number;
+  };
+  locale: Locale;
+}
+
+export interface ServiceslistProps {
+  services: {
+    services: Service[];
+    totalPages: number;
+  };
+  locale: Locale;
+  category: "Style" | "Makeup";
+}
+
+export interface ServiceCardProps {
+  service: Service;
+  category: "Style" | "Makeup";
+  number: number;
+  locale: Locale;
 }

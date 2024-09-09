@@ -1,6 +1,6 @@
 import { defaultLocale, Locale } from "@/utils/config";
 import { getLocale } from "next-intl/server";
-import { fetchService } from "../services";
+import { fetchService } from "../../../../../utils/services";
 import MakeupDetailsPage from "./MakeUpDetailsPage";
 
 export default async function MakeupLayout({

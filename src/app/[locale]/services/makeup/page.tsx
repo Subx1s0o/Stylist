@@ -1,17 +1,12 @@
 import { defaultLocale, Locale } from "@/utils/config";
+import { fetchServices } from "@/utils/services";
 import { getLocale } from "next-intl/server";
-import { fetchServices } from "./services";
-import ServicesPage from "./ServicesPage";
+
+import ServicesMakeupPage from "@/components/sections/Services/ServicesMakeupPage";
 
 export default async function MakeUpPage() {
   const services = await fetchServices(1, "makeup");
   const locale = (await getLocale()) || defaultLocale;
 
-  return (
-    <section className="pt-[68px] pb-section">
-      <div className="my-container">
-        <ServicesPage services={services} locale={locale as Locale} />
-      </div>
-    </section>
-  );
+  return <ServicesMakeupPage services={services} locale={locale as Locale} />;
 }
