@@ -1,6 +1,7 @@
 "use client";
 
 import { ServiceCardProps } from "@/types/services.interface";
+import { animated, useSpring } from "@react-spring/web";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
@@ -19,13 +20,14 @@ export default function ServiceCard({
     setImageLoaded(true);
   };
 
+  const fadeInStyle = useSpring({
+    opacity: imageLoaded ? 1 : 0,
+    transform: imageLoaded ? "translateY(0)" : "translateY(20px)",
+    config: { tension: 220, friction: 20 },
+  });
+
   return (
-    <li
-      className={`grid grid-cols-2 gap-2 ${
-        imageLoaded ? "opacity-100" : "opacity-0"
-      }`}
-      style={{ transition: "opacity 0.3s ease-in-out" }}
-    >
+    <animated.li style={fadeInStyle} className="grid grid-cols-2 gap-2">
       <div className="overflow-hidden">
         <h2 className="text-base font-exo2 mb-2">
           #{number + 1} {service.title[locale]}
@@ -51,8 +53,9 @@ export default function ServiceCard({
           style={{ objectFit: "cover" }}
           quality={70}
           onLoad={handleImageLoad}
+          loading="eager"
         />
       </div>
-    </li>
+    </animated.li>
   );
 }

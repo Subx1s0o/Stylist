@@ -1,18 +1,24 @@
 "use client";
 import BurgerIcon from "@/assets/icons/ui/burger.svg";
-import { AnimatePresence, LazyMotion, m } from "framer-motion";
+import { animated, useTransition } from "@react-spring/web";
 import { useRef, useState } from "react";
 import { useClickAway } from "react-use";
 import MobileLocaleSwitcher from "../localeSwitcher/MobileLocaleSwitcher";
 import BurgerMenuLinks from "./BurgerMenuLinks";
+
 export default function Burger() {
   const [open, setOpen] = useState(false);
   const closeMenu = () => setOpen(false);
-  const loadFeatures = () =>
-    import("@/utils/framer.ts").then((res) => res.default);
   const toggleMenu = () => setOpen((prev) => !prev);
   const ref = useRef<HTMLDivElement>(null);
   useClickAway(ref, () => setOpen(false));
+
+  const transitions = useTransition(open, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: { duration: 100 },
+  });
 
   return (
     <div ref={ref} className="relative inline-flex">
@@ -23,22 +29,19 @@ export default function Burger() {
       >
         <BurgerIcon />
       </button>
-      <LazyMotion features={loadFeatures}>
-        <AnimatePresence>
-          {open && (
-            <m.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+
+      {transitions(
+        (styles, item) =>
+          item && (
+            <animated.div
+              style={styles}
               className="absolute top-0 right-0 pt-[68px] pb-4 px-4 bg-white z-10"
             >
               <BurgerMenuLinks onLinkClick={() => setOpen(false)} />
               <MobileLocaleSwitcher closeMenu={closeMenu} />
-            </m.div>
-          )}
-        </AnimatePresence>
-      </LazyMotion>
+            </animated.div>
+          )
+      )}
     </div>
   );
 }
