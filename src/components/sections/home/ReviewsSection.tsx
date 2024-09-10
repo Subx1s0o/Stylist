@@ -46,6 +46,7 @@ export default function ReviewsSection() {
                     alt={t(`${slide.translateCode}.name`)}
                     width={56}
                     height={56}
+                    priority
                   />
                   <div className="flex flex-col">
                     <h3 className="text-base font-exo2">

@@ -23,6 +23,7 @@ export default function AboutMeSection() {
                   height: "auto",
                   minHeight: "232px",
                 }}
+                priority
               />
 
               <Icon
@@ -56,6 +57,7 @@ export default function AboutMeSection() {
                   height: "auto",
                   minHeight: "201px",
                 }}
+                priority
               />
 
               <Icon
