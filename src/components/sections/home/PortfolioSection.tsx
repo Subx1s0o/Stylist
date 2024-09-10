@@ -45,7 +45,6 @@ export default function PortfolioSection() {
                 style={{ width: "100%", height: "auto" }}
                 src={img.src}
                 alt={`portfolio image ${index + 1}`}
-                layout="responsive"
                 priority
               />
             </li>
