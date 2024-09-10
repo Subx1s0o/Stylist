@@ -25,6 +25,7 @@ export default function ServicesSection({ className }: Props) {
                 }}
                 src="/images/services/service.avif"
                 alt="makeup"
+                priority
               />
 
               <div className=" py-[14px] absolute bottom-10 w-full bg-primary-black">
@@ -43,6 +44,7 @@ export default function ServicesSection({ className }: Props) {
                 }}
                 src="/images/services/service2.avif"
                 alt="styling"
+                priority
               />
 
               <div className=" py-[14px] absolute bottom-10 w-full bg-primary-black">
