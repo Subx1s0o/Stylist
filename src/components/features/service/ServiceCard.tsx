@@ -1,11 +1,11 @@
 "use client";
 
+import CustomLink from "@/components/ui/CustomLink";
 import { ServiceCardProps } from "@/types/services.interface";
 import { animated, useSpring } from "@react-spring/web";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import CustomLink from "../ui/CustomLink";
 
 export default function ServiceCard({
   service,
@@ -22,7 +22,6 @@ export default function ServiceCard({
 
   const fadeInStyle = useSpring({
     opacity: imageLoaded ? 1 : 0,
-    // transform: imageLoaded ? "translateY(0)" : "translateY(20px)",
     config: { tension: 220, friction: 20 },
   });
 

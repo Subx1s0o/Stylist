@@ -1,5 +1,5 @@
-import ServicesBreadcrumb from "@/components/features/ServicesBreadcrumb";
-import ServicesList from "@/components/features/ServicesList";
+import ServicesBreadcrumb from "@/components/features/services/ServicesBreadcrumb";
+import ServicesList from "@/components/features/services/ServicesList";
 import { ServicesPageProps } from "@/types/services.interface";
 import { useTranslations } from "next-intl";
 

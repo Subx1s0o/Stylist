@@ -3,7 +3,7 @@ import { Service, ServiceslistProps } from "@/types/services.interface";
 import { loadMoreServices } from "@/utils/loadMoreServices";
 import { fetchServices } from "@/utils/services";
 import { useEffect, useRef, useState } from "react";
-import ServiceCard from "./ServiceCard";
+import ServiceCard from "../service/ServiceCard";
 
 export default function ServicesList({
   services,

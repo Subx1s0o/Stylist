@@ -1,3 +1,4 @@
+import Icon from "@/components/features/Icon";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -30,20 +31,18 @@ export default function AboutMeSection() {
                 />
               </picture>
 
-              <svg
+              <Icon
+                id="icon-about-rectangle"
                 width={15}
                 height={15}
                 className="absolute -top-xs -right-xs"
-              >
-                <use href="/sprite.svg#icon-about-rectangle" />
-              </svg>
-              <svg
+              />
+              <Icon
+                id="icon-about-rectangle"
                 width={15}
                 height={15}
                 className="absolute -bottom-xs -right-xs rotate-90"
-              >
-                <use href="/sprite.svg#icon-about-rectangle" />
-              </svg>
+              />
             </div>
 
             <p className="text-sm max-w-[153px]">{t("second-text")}</p>
@@ -70,20 +69,18 @@ export default function AboutMeSection() {
                   }}
                 />
               </picture>
-              <svg
+              <Icon
+                id="icon-about-rectangle"
                 width={15}
                 height={15}
                 className="absolute -top-xs -left-xs rotate-[270deg]"
-              >
-                <use href="/sprite.svg#icon-about-rectangle" />
-              </svg>
-              <svg
+              />
+              <Icon
+                id="icon-about-rectangle"
                 width={15}
                 height={15}
                 className="absolute -bottom-xs -left-xs rotate-180"
-              >
-                <use href="/sprite.svg#icon-about-rectangle" />
-              </svg>
+              />
             </div>
           </li>
         </ul>

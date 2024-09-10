@@ -1,4 +1,5 @@
 "use client";
+import Icon from "@/components/features/Icon";
 import { slides } from "@/constans/reviews";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -27,16 +28,18 @@ export default function ReviewsSection() {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div className="p-5 relative h-full min-h-[263px] flex flex-col">
-                <svg width={15} height={15} className="absolute top-0 right-0">
-                  <use href="/sprite.svg#icon-about-rectangle" />
-                </svg>
-                <svg
+                <Icon
+                  id="icon-about-rectangle"
+                  width={15}
+                  height={15}
+                  className="absolute top-0 right-0"
+                />
+                <Icon
+                  id="icon-about-rectangle"
                   width={15}
                   height={15}
                   className="absolute bottom-0 right-0 rotate-90"
-                >
-                  <use href="/sprite.svg#icon-about-rectangle" />
-                </svg>
+                />
                 <div className="flex mb-3 gap-2">
                   <Image
                     src={slide.photo}
@@ -55,20 +58,18 @@ export default function ReviewsSection() {
                   </div>
                 </div>
                 <p className="text-sm">{t(`${slide.translateCode}.review`)}</p>
-                <svg
+                <Icon
+                  id="icon-about-rectangle"
                   width={15}
                   height={15}
                   className="absolute top-0 left-0 rotate-[270deg]"
-                >
-                  <use href="/sprite.svg#icon-about-rectangle" />
-                </svg>
-                <svg
+                />
+                <Icon
+                  id="icon-about-rectangle"
                   width={15}
                   height={15}
                   className="absolute bottom-0 left-0 rotate-180"
-                >
-                  <use href="/sprite.svg#icon-about-rectangle " />
-                </svg>
+                />
               </div>
             </SwiperSlide>
           ))}

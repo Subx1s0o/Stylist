@@ -1,3 +1,4 @@
+import Icon from "@/components/features/Icon";
 import Burger from "@/components/ui/Burger/Burger";
 import HomeLogo from "./../ui/HomeLogo";
 
@@ -6,9 +7,7 @@ export default function Header() {
     <header className="border-b border-lightGrey fixed z-50 bg-white w-full">
       <div className="my-container flex items-center justify-between py-2 ">
         <HomeLogo>
-          <svg width={32} height={32}>
-            <use href="/sprite.svg#icon-Logo" />
-          </svg>
+          <Icon width={32} height={32} id="icon-Logo" />
         </HomeLogo>
         <Burger />
       </div>

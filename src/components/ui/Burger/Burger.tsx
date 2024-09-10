@@ -1,4 +1,5 @@
 "use client";
+import Icon from "@/components/features/Icon";
 import { animated, useTransition } from "@react-spring/web";
 import { useRef, useState } from "react";
 import { useClickAway } from "react-use";
@@ -26,9 +27,7 @@ export default function Burger() {
         aria-label="Toggle Menu"
         onClick={toggleMenu}
       >
-        <svg width={24} height={24}>
-          <use href="/sprite.svg#icon-burger" />
-        </svg>
+        <Icon width={24} height={24} id="icon-burger" />
       </button>
 
       {transitions(

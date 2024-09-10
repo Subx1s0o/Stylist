@@ -1,18 +1,16 @@
+import Icon from "@/components/features/Icon";
 import { links } from "@/constans/paths";
 import { socialLinks } from "@/constans/socials";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import HomeLogo from "../ui/HomeLogo";
-
 export default function Footer() {
   const t = useTranslations("Common.menu");
   return (
     <footer className="border-t border-lightGrey">
       <div className="mx-auto flex flex-col items-center gap-6 p-5">
         <HomeLogo>
-          <svg width={64} height={64}>
-            <use href="/sprite.svg#icon-Logo" />
-          </svg>
+          <Icon width={64} height={64} id="icon-Logo" />
         </HomeLogo>
         <nav className=" w-full flex flex-col gap-6 items-center">
           <ul className="flex flex-col gap-1 w-full ">
@@ -37,9 +35,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <svg width={24} height={24}>
-                      <use href={icon} />
-                    </svg>
+                    <Icon width={24} height={24} id={icon} />
                     {label}
                   </a>
                 </li>
