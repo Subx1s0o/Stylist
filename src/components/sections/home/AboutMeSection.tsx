@@ -12,24 +12,18 @@ export default function AboutMeSection() {
         <ul className="grid grid-rows-2 gap-[22px] ">
           <li className="grid grid-cols-[1fr_1fr] gap-4 items-center">
             <div className="relative">
-              <picture>
-                <source
-                  srcSet="/images/about/about-me1@2x.jpg 2x"
-                  media="(min-resolution: 2dppx)"
-                />
-                <Image
-                  src="/images/about/about-me1.jpg"
-                  alt="Stylish People "
-                  width={174}
-                  height={272}
-                  style={{
-                    width: "100%",
-                    minWidth: "134px",
-                    height: "auto",
-                    minHeight: "232px",
-                  }}
-                />
-              </picture>
+              <Image
+                src="/images/about/about-me1.avif"
+                alt="Stylish People "
+                width={174}
+                height={272}
+                style={{
+                  width: "100%",
+                  minWidth: "134px",
+                  height: "auto",
+                  minHeight: "232px",
+                }}
+              />
 
               <Icon
                 id="icon-about-rectangle"
@@ -51,24 +45,19 @@ export default function AboutMeSection() {
             <p className="text-sm">{t("third-text")}</p>
 
             <div className="relative">
-              <picture>
-                <source
-                  srcSet="/images/about/about-me2@2x.jpg 2x"
-                  media="(min-resolution: 2dppx)"
-                />
-                <Image
-                  src="/images/about/about-me2.jpg"
-                  alt="Stylish People "
-                  width={217}
-                  height={241}
-                  style={{
-                    width: "100%",
-                    minWidth: "177px",
-                    height: "auto",
-                    minHeight: "201px",
-                  }}
-                />
-              </picture>
+              <Image
+                src="/images/about/about-me2.avif"
+                alt="Stylish People "
+                width={217}
+                height={241}
+                style={{
+                  width: "100%",
+                  minWidth: "177px",
+                  height: "auto",
+                  minHeight: "201px",
+                }}
+              />
+
               <Icon
                 id="icon-about-rectangle"
                 width={15}

@@ -40,20 +40,15 @@ export default function ContactsPage() {
       </div>
 
       <div className="relative">
-        <picture>
-          <source
-            srcSet="/images/contacts/background@2x.jpg 2x"
-            media="(min-resolution: 2dppx)"
-          />
-          <Image
-            width={375}
-            height={410}
-            style={{ width: "100%", height: "auto", minHeight: "335px" }}
-            src="/images/contacts/background.jpg"
-            alt="background photo"
-            priority
-          />
-        </picture>
+        <Image
+          width={375}
+          height={410}
+          style={{ width: "100%", height: "auto", minHeight: "335px" }}
+          src="/images/contacts/background.avif"
+          alt="background photo"
+          priority
+        />
+
         <div className="absolute w-full my-container top-[40px] ">
           <h3 className="mb-3 text-white font-exo2 text-center text-base">
             {t("form.title")}
