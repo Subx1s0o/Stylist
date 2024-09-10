@@ -1,5 +1,4 @@
 "use client";
-import RectangleIcon from "@/assets/icons/decoration/about-rectangle.svg";
 import { slides } from "@/constans/reviews";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -28,8 +27,16 @@ export default function ReviewsSection() {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div className="p-5 relative h-full min-h-[263px] flex flex-col">
-                <RectangleIcon className="absolute top-0 right-0" />
-                <RectangleIcon className="absolute bottom-0 right-0 rotate-90" />
+                <svg width={15} height={15} className="absolute top-0 right-0">
+                  <use href="/sprite.svg#icon-about-rectangle" />
+                </svg>
+                <svg
+                  width={15}
+                  height={15}
+                  className="absolute bottom-0 right-0 rotate-90"
+                >
+                  <use href="/sprite.svg#icon-about-rectangle" />
+                </svg>
                 <div className="flex mb-3 gap-2">
                   <Image
                     src={slide.photo}
@@ -48,8 +55,20 @@ export default function ReviewsSection() {
                   </div>
                 </div>
                 <p className="text-sm">{t(`${slide.translateCode}.review`)}</p>
-                <RectangleIcon className="absolute top-0 left-0 rotate-[270deg]" />
-                <RectangleIcon className="absolute bottom-0 left-0 rotate-180" />
+                <svg
+                  width={15}
+                  height={15}
+                  className="absolute top-0 left-0 rotate-[270deg]"
+                >
+                  <use href="/sprite.svg#icon-about-rectangle" />
+                </svg>
+                <svg
+                  width={15}
+                  height={15}
+                  className="absolute bottom-0 left-0 rotate-180"
+                >
+                  <use href="/sprite.svg#icon-about-rectangle " />
+                </svg>
               </div>
             </SwiperSlide>
           ))}

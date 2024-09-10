@@ -2,7 +2,7 @@ export async function fetchServices(page: number = 1, category: string) {
   const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/services/${category}?limit=5&page=${page}`;
 
   try {
-    const res = await fetch(url, { cache: "no-store" }); 
+    const res = await fetch(url, { next: { revalidate: 1200 } });
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
@@ -17,7 +17,7 @@ export async function fetchService(id: string, category: string) {
   const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/services/${category}/${id}`;
 
   try {
-    const res = await fetch(url, { cache: "no-store" });
+    const res = await fetch(url, { next: { revalidate: 1200 } });
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }

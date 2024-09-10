@@ -1,4 +1,3 @@
-import LogoIcon from "@/assets/icons/logos/Logo64.svg";
 import { links } from "@/constans/paths";
 import { socialLinks } from "@/constans/socials";
 import { useTranslations } from "next-intl";
@@ -11,7 +10,9 @@ export default function Footer() {
     <footer className="border-t border-lightGrey">
       <div className="mx-auto flex flex-col items-center gap-6 p-5">
         <HomeLogo>
-          <LogoIcon width={64} height={64} />
+          <svg width={64} height={64}>
+            <use href="/sprite.svg#icon-Logo" />
+          </svg>
         </HomeLogo>
         <nav className=" w-full flex flex-col gap-6 items-center">
           <ul className="flex flex-col gap-1 w-full ">
@@ -28,7 +29,7 @@ export default function Footer() {
           </ul>
           <address className="not-italic">
             <ul className="flex flex-col max-w-[187px] gap-3">
-              {socialLinks.map(({ href, label, icon: Icon }) => (
+              {socialLinks.map(({ href, label, icon }) => (
                 <li key={label} className="flex items-center gap-2">
                   <a
                     className="text-sm flex items-center gap-2"
@@ -36,7 +37,9 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon width={24} height={24} />
+                    <svg width={24} height={24}>
+                      <use href={icon} />
+                    </svg>
                     {label}
                   </a>
                 </li>

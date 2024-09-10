@@ -22,7 +22,7 @@ export default function ServiceCard({
 
   const fadeInStyle = useSpring({
     opacity: imageLoaded ? 1 : 0,
-    transform: imageLoaded ? "translateY(0)" : "translateY(20px)",
+    // transform: imageLoaded ? "translateY(0)" : "translateY(20px)",
     config: { tension: 220, friction: 20 },
   });
 

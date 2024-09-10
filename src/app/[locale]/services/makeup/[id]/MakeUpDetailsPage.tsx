@@ -1,10 +1,10 @@
+import ServiceBreadCrumb from "@/components/features/service/ServiceBreadCrumb";
 import AdviceSection from "@/components/sections/home/AdviceSection";
 import { Service } from "@/types/services.interface";
 import { Locale } from "@/utils/config";
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function MakeupDetailsPage({
   service,
@@ -23,27 +23,7 @@ export default function MakeupDetailsPage({
         <section className="pt-[68px] pb-section">
           <div className="my-container">
             <h1 className="font-exo2 text-md text-center mb-5">{title}</h1>
-            <nav className="mb-3">
-              <ul className="flex">
-                <li>
-                  <Link href="/services">{t("breadcrumbs.first-link")}</Link>
-                </li>
-                <li>
-                  <span>&nbsp;/&nbsp;</span>
-                </li>
-                <li>
-                  <Link href="/services/makeup">
-                    {t("breadcrumbs.second-link")}
-                  </Link>
-                </li>
-                <li>
-                  <span>&nbsp;/&nbsp;</span>
-                </li>
-                <li>
-                  <Link href={`/services/makeup/${service._id}`}>{title}</Link>
-                </li>
-              </ul>
-            </nav>
+            <ServiceBreadCrumb title={title} />
             <div
               className={`relative w-full overflow-hidden ${
                 service.attention ? "mb-3" : "mb-5"
@@ -114,7 +94,7 @@ export default function MakeupDetailsPage({
               </ul>
             </div>
             {service.stages && (
-              <>
+              <div>
                 <h2 className="text-base text-center font-exo2 mb-3">
                   {t("stages")}
                 </h2>
@@ -128,31 +108,7 @@ export default function MakeupDetailsPage({
                               {index + 1}
                             </small>
                           </div>
-                          <small className="mx-[6px] text-md font-exo2 leading-[0%]">
-                            <svg
-                              width="20px"
-                              height="20px"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                              <g
-                                id="SVGRepo_tracerCarrier"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              ></g>
-                              <g id="SVGRepo_iconCarrier">
-                                <path
-                                  d="M4 12H20M20 12L16 8M20 12L16 16"
-                                  stroke="#000000"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                ></path>
-                              </g>
-                            </svg>
-                          </small>
+
                           <div className="flex-1 ">
                             <p className="text-sm font-exo2 ">
                               {value[locale]}
@@ -163,7 +119,7 @@ export default function MakeupDetailsPage({
                     )}
                   </ul>
                 </div>
-              </>
+              </div>
             )}
 
             <div>

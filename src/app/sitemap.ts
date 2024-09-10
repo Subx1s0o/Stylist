@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/services`,
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 0.5,
+      priority: 1,
     },
     {
       url: `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/services/makeup`,
