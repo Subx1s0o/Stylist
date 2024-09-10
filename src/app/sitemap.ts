@@ -9,12 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/about-me`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
-    {
       url: `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/services`,
       lastModified: new Date(),
       changeFrequency: "yearly",
@@ -23,26 +17,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/services/makeup`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "always",
       priority: 0.8,
     },
     {
       url: `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/services/style`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "always",
       priority: 0.8,
     },
     {
       url: `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/contacts`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.5,
     },
     {
       url: `${process.env.NEXT_PUBLIC_PRODUCTION_URL}/portfolio`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.3,
     },
   ];
 }
