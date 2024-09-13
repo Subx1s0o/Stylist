@@ -1,6 +1,7 @@
+import { forwardRef, ReactNode, Ref } from "react";
+
 import clsx from "clsx";
 import Link from "next/link";
-import { forwardRef, ReactNode, Ref } from "react";
 
 interface LinkProps {
   href: string;
@@ -19,7 +20,7 @@ const CustomLink = forwardRef<HTMLAnchorElement, LinkProps>(
         "bg-white text-black border-none": variant === "white",
         "bg-transparent text-black border border-black": variant === "outline",
       },
-      className
+      className,
     );
 
     return (
@@ -27,7 +28,7 @@ const CustomLink = forwardRef<HTMLAnchorElement, LinkProps>(
         {children}
       </Link>
     );
-  }
+  },
 );
 
 CustomLink.displayName = "CustomLink";

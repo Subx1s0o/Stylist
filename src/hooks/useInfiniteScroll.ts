@@ -28,7 +28,7 @@ export function useInfiniteScroll({
           await loadMore();
         }
       },
-      { rootMargin, threshold }
+      { rootMargin, threshold },
     );
 
     observer.observe(observerElement);

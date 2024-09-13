@@ -10,14 +10,14 @@ export const loadMoreServices = async (
   setCurrentServices: React.Dispatch<React.SetStateAction<ServicesState>>,
   fetchServices: (
     currentPage: number,
-    category: string
+    category: string,
   ) => Promise<{ services: Service[]; totalPages: number }>,
-  category: string
+  category: string,
 ) => {
   try {
     const { services: newServices, totalPages } = await fetchServices(
       currentPage + 1,
-      category
+      category,
     );
 
     setCurrentServices((prev) => ({

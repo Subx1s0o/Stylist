@@ -1,7 +1,9 @@
+import { ServicesPageProps } from "@/types/services.interface";
+
 import ServicesBreadcrumb from "@/components/elements/BreadCrumb/ServicesBreadCrumb";
 import FormatSwitcher from "@/components/features/FormatSwitcher";
-import { ServicesPageProps } from "@/types/services.interface";
 import { useTranslations } from "next-intl";
+
 import ServicesList from "./ServicesList";
 
 export default function ServicesPage({

@@ -1,7 +1,8 @@
 "use client";
 
-import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import { FC, PropsWithChildren } from "react";
+
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
 export const progressBarRef = {
   start: () => {},
@@ -16,7 +17,6 @@ const Providers: FC<PropsWithChildren> = ({ children }) => {
         color="#000000"
         options={{ showSpinner: false }}
         shallowRouting
-        
       />
       {children}
     </>

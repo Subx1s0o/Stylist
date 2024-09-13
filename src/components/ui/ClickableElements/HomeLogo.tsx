@@ -1,8 +1,9 @@
 "use client";
 
+import { PropsWithChildren } from "react";
+
 import { startProgress } from "next-nprogress-bar";
 import { usePathname, useRouter } from "next/navigation";
-import { PropsWithChildren } from "react";
 
 export default function HomeLogo({ children }: PropsWithChildren) {
   const pathname = usePathname();

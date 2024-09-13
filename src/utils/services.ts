@@ -1,7 +1,7 @@
 export async function fetchServices(
   page: number = 1,
   category: string,
-  format?: string
+  format?: string,
 ) {
   const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/services/${category}?${
     format && `format=${format}`

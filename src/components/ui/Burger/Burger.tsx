@@ -1,8 +1,11 @@
 "use client";
-import Icon from "@/components/features/Icon";
-import { animated, useTransition } from "@react-spring/web";
+
 import { useRef, useState } from "react";
 import { useClickAway } from "react-use";
+
+import Icon from "@/components/features/Icon";
+import { animated, useTransition } from "@react-spring/web";
+
 import MobileLocaleSwitcher from "../localeSwitcher/MobileLocaleSwitcher";
 import BurgerMenuLinks from "./BurgerMenuLinks";
 
@@ -40,7 +43,7 @@ export default function Burger() {
               <BurgerMenuLinks onLinkClick={() => setOpen(false)} />
               <MobileLocaleSwitcher closeMenu={closeMenu} />
             </animated.div>
-          )
+          ),
       )}
     </div>
   );

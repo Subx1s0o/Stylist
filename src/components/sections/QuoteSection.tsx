@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+
 export default function QuoteSection() {
   const t = useTranslations("Home.quote");
   return (

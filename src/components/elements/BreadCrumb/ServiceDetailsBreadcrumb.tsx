@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+
 import BreadcrumbItem from "./BreadCrumbItem";
 
 export default function ServiceDetailsBreadCrumb({

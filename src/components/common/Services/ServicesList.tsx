@@ -1,9 +1,13 @@
 "use client";
-import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
+
+import { useEffect, useState } from "react";
+
 import { Service, ServiceslistProps } from "@/types/services.interface";
+
+import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
 import { loadMoreServices } from "@/utils/loadMoreServices";
 import { fetchServices } from "@/utils/services";
-import { useEffect, useState } from "react";
+
 import ServiceCard from "./ServiceCard";
 
 export default function ServicesList({
@@ -29,7 +33,7 @@ export default function ServicesList({
       currentPage,
       setCurrentServices,
       fetchServices,
-      category.toLowerCase()
+      category.toLowerCase(),
     );
     setCurrentPage(newPage);
   };

@@ -3,7 +3,9 @@ import { links } from "@/constans/paths";
 import { socialLinks } from "@/constans/socials";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+
 import HomeLogo from "../../ui/ClickableElements/HomeLogo";
+
 export default function Footer() {
   const t = useTranslations("Common.menu");
   return (

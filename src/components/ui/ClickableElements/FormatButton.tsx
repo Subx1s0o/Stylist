@@ -1,5 +1,6 @@
-import clsx from "clsx";
 import { ButtonHTMLAttributes, forwardRef, ReactNode } from "react";
+
+import clsx from "clsx";
 
 interface FormatButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   format: string;
@@ -13,7 +14,7 @@ interface FormatButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const FormatButton = forwardRef<HTMLButtonElement, FormatButtonProps>(
   (
     { format, activeFormat, children, className, handleFormatChange, ...rest },
-    ref
+    ref,
   ) => {
     const buttonClasses = clsx(
       "px-4 py-2 text-base font-exo2 w-full text-center",
@@ -21,7 +22,7 @@ const FormatButton = forwardRef<HTMLButtonElement, FormatButtonProps>(
         "bg-lightGrey text-black": activeFormat === format,
         "bg-white text-black border-b border-gray-300": activeFormat !== format,
       },
-      className
+      className,
     );
 
     return (
@@ -34,7 +35,7 @@ const FormatButton = forwardRef<HTMLButtonElement, FormatButtonProps>(
         {children}
       </button>
     );
-  }
+  },
 );
 
 FormatButton.displayName = "FormatButton";

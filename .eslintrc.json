@@ -6,7 +6,8 @@
     "react",
     "react-hooks",
     "tailwindcss",
-    "@next/eslint-plugin-next"
+    "@next/eslint-plugin-next",
+    "prettier"
   ],
   "extends": [
     "eslint:recommended",
@@ -15,7 +16,8 @@
     "plugin:react-hooks/recommended",
     "plugin:tailwindcss/recommended",
     "next/core-web-vitals",
-    "plugin:@next/next/recommended"
+    "plugin:@next/next/recommended",
+    "prettier"
   ],
   "rules": {
     "tailwindcss/classnames-order": "off",

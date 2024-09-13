@@ -1,7 +1,7 @@
-import ServiceDetailsBreadCrumb from "@/components/elements/BreadCrumb/ServiceDetailsBreadcrumb";
-import AdviceSection from "@/components/sections/AdviceSection";
 import { ServiceCardProps } from "@/types/services.interface";
 
+import ServiceDetailsBreadCrumb from "@/components/elements/BreadCrumb/ServiceDetailsBreadcrumb";
+import AdviceSection from "@/components/sections/AdviceSection";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -114,7 +114,7 @@ export default function ServiceDetailsPage({
                             </p>
                           </div>
                         </li>
-                      )
+                      ),
                     )}
                   </ul>
                 </div>

@@ -1,11 +1,13 @@
 "use client";
 
-import CustomLink from "@/components/ui/ClickableElements/CustomLink";
+import { useState } from "react";
+
 import { ServiceCardProps } from "@/types/services.interface";
+
+import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 import { animated, useSpring } from "@react-spring/web";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function ServiceCard({
   service,

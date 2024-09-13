@@ -1,5 +1,6 @@
-import clsx from "clsx";
 import { ButtonHTMLAttributes, forwardRef, ReactNode, Ref } from "react";
+
+import clsx from "clsx";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "black" | "white" | "outline";
@@ -17,7 +18,7 @@ const CustomButton = forwardRef<HTMLButtonElement, ButtonProps>(
         "bg-white text-black border-none": variant === "white",
         "bg-transparent text-black border border-black": variant === "outline",
       },
-      className
+      className,
     );
 
     return (
@@ -25,7 +26,7 @@ const CustomButton = forwardRef<HTMLButtonElement, ButtonProps>(
         {children}
       </button>
     );
-  }
+  },
 );
 
 CustomButton.displayName = "CustomButton";

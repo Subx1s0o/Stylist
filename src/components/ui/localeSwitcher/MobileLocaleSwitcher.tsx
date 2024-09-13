@@ -1,4 +1,5 @@
 "use client";
+
 import { Locale } from "@/utils/config";
 import { setUserLocale } from "@/utils/locale";
 import { useLocale } from "next-intl";
