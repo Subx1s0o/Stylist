@@ -1,9 +1,10 @@
 "use client";
+import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
 import { Service, ServiceslistProps } from "@/types/services.interface";
 import { loadMoreServices } from "@/utils/loadMoreServices";
 import { fetchServices } from "@/utils/services";
-import { useEffect, useRef, useState } from "react";
-import ServiceCard from "../service/ServiceCard";
+import { useEffect, useState } from "react";
+import ServiceCard from "./ServiceCard";
 
 export default function ServicesList({
   services,
@@ -17,42 +18,27 @@ export default function ServicesList({
 
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(services.totalPages);
-  const observerRef = useRef<HTMLLIElement | null>(null);
 
   useEffect(() => {
+    setCurrentServices(services);
     setTotalPages(services.totalPages);
-  }, [services.totalPages]);
+  }, [services.totalPages, services]);
 
-  useEffect(() => {
-    const observerElement = observerRef.current;
-
-    if (!observerElement) return;
-
-    const observer = new IntersectionObserver(
-      async ([entry]) => {
-        if (entry.isIntersecting && currentPage < totalPages) {
-          const newPage = await loadMoreServices(
-            currentPage,
-            setCurrentServices,
-            fetchServices,
-            category.toLowerCase()
-          );
-
-          setCurrentPage(newPage);
-        }
-      },
-      {
-        rootMargin: "0px 0px 250px 0px",
-        threshold: 0.1,
-      }
+  const loadMore = async () => {
+    const newPage = await loadMoreServices(
+      currentPage,
+      setCurrentServices,
+      fetchServices,
+      category.toLowerCase()
     );
+    setCurrentPage(newPage);
+  };
 
-    observer.observe(observerElement);
-
-    return () => {
-      if (observerElement) observer.unobserve(observerElement);
-    };
-  }, [currentPage, totalPages, category]);
+  const observerRef = useInfiniteScroll({
+    loadMore,
+    currentPage,
+    totalPages,
+  });
 
   return (
     <ul className="flex flex-col gap-7">

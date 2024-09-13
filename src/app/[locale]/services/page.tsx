@@ -1,4 +1,4 @@
-import ServicesSection from "@/components/sections/home/ServicesSection";
+import ServicesSection from "@/components/sections/ServicesSection";
 import { defaultLocale } from "@/utils/config";
 import { servicesMetadataConfig } from "@/utils/metadata";
 import { Metadata } from "next";

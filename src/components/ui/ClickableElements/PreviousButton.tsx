@@ -11,7 +11,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const PreviousButton = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = "black", className, children, ...rest }, ref) => {
-    // const router = useRouter();
     const buttonClasses = clsx(
       "py-3 px-6  text-base font-medium w-full text-center ",
       {

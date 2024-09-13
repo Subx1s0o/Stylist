@@ -1,10 +1,10 @@
-import AboutMeSection from "@/components/sections/home/AboutMeSection";
-import AdviceSection from "@/components/sections/home/AdviceSection";
-import HeroSection from "@/components/sections/home/HeroSection";
-import PortfolioSection from "@/components/sections/home/PortfolioSection";
-import QuoteSection from "@/components/sections/home/QuoteSection";
-import ReviewsSection from "@/components/sections/home/ReviewsSection";
-import ServicesSection from "@/components/sections/home/ServicesSection";
+import AboutMeSection from "@/components/sections/AboutMeSection";
+import AdviceSection from "@/components/sections/AdviceSection";
+import HeroSection from "@/components/sections/HeroSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
+import QuoteSection from "@/components/sections/QuoteSection";
+import ReviewsSection from "@/components/sections/ReviewsSection";
+import ServicesSection from "@/components/sections/ServicesSection";
 
 export default function HomePage() {
   return (

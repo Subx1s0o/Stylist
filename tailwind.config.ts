@@ -18,7 +18,7 @@ export default {
       },
       colors: {
         darkGrey: "#645E58",
-        lightGrey: "#B5AFAE",
+        lightGrey: "#ECE8E7",
         error: "#FF4444",
         black: "#2B2423",
         white: "#FAF8F0",
@@ -85,5 +85,10 @@ export default {
       },
     },
   },
+  safelist: [
+    {
+      pattern: /row-span-(2|3)/,
+    },
+  ],
   plugins: [],
 } as Config;

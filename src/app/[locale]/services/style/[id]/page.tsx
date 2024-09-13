@@ -2,7 +2,7 @@ import ServiceDetailsPage from "@/components/common/ServiceDetails/ServiceDetail
 import { defaultLocale, Locale } from "@/utils/config";
 import { fetchService } from "@/utils/services";
 import { getLocale } from "next-intl/server";
-export default async function MakeupLayout({
+export default async function StyleLayout({
   params: { id },
 }: {
   params: { id: string };
@@ -14,7 +14,7 @@ export default async function MakeupLayout({
     <ServiceDetailsPage
       service={service}
       locale={locale as Locale}
-      category="Makeup"
+      category="Style"
     />
   );
 }

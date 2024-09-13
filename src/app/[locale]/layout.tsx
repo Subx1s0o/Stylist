@@ -1,6 +1,6 @@
-import Footer from "@/components/common/Footer";
-import Header from "@/components/common/Header";
-import Providers from "@/components/common/Providers";
+import Footer from "@/components/common/layout/Footer";
+import Header from "@/components/common/layout/Header";
+import Providers from "@/components/common/Providers/Providers";
 import "@/styles/globals.css";
 import { defaultLocale } from "@/utils/config";
 import { homeMetadataConfig } from "@/utils/metadata";

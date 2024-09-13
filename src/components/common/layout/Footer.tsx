@@ -3,11 +3,11 @@ import { links } from "@/constans/paths";
 import { socialLinks } from "@/constans/socials";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import HomeLogo from "../ui/HomeLogo";
+import HomeLogo from "../../ui/ClickableElements/HomeLogo";
 export default function Footer() {
   const t = useTranslations("Common.menu");
   return (
-    <footer className="border-t border-lightGrey">
+    <footer className="border-t border-darkGrey">
       <div className="mx-auto flex flex-col items-center gap-6 p-5">
         <HomeLogo>
           <Icon width={64} height={64} id="icon-Logo" />

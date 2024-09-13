@@ -1,9 +1,23 @@
-import ServicesStylePage from "@/components/sections/Services/ServicesStylePage";
+import ServicesPage from "@/components/common/Services/ServicesPage";
 import { defaultLocale, Locale } from "@/utils/config";
 import { fetchServices } from "@/utils/services";
 import { getLocale } from "next-intl/server";
-export default async function StyleUpPage() {
-  const services = await fetchServices(1, "style");
+
+interface StyleUpPageProps {
+  searchParams: { format?: string };
+}
+
+export default async function StyleUpPage({ searchParams }: StyleUpPageProps) {
+  const { format } = searchParams;
+  const actualFormat = format || "online";
+  const services = await fetchServices(1, "style", actualFormat);
   const locale = (await getLocale()) || defaultLocale;
-  return <ServicesStylePage services={services} locale={locale as Locale} />;
+  return (
+    <ServicesPage
+      services={services}
+      locale={locale as Locale}
+      isFormat={true}
+      category="Style"
+    />
+  );
 }

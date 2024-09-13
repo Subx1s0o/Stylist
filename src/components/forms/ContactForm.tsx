@@ -1,5 +1,5 @@
 "use client";
-import CustomButton from "@/components/ui/CustomButton";
+import CustomButton from "@/components/ui/ClickableElements/CustomButton";
 import { useFormTranslations } from "@/hooks/useFormTranslations";
 import { useLocale } from "next-intl";
 import { useEffect } from "react";

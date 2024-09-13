@@ -1,29 +1,28 @@
-import ServiceBreadCrumb from "@/components/features/service/ServiceBreadCrumb";
-import AdviceSection from "@/components/sections/home/AdviceSection";
-import { Service } from "@/types/services.interface";
-import { Locale } from "@/utils/config";
+import ServiceDetailsBreadCrumb from "@/components/elements/BreadCrumb/ServiceDetailsBreadcrumb";
+import AdviceSection from "@/components/sections/AdviceSection";
+import { ServiceCardProps } from "@/types/services.interface";
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-export default function MakeupDetailsPage({
+export default function ServiceDetailsPage({
   service,
   locale,
-}: {
-  service: Service;
-  locale: Locale;
-}) {
-  const t = useTranslations("ServicePage.Makeup");
+  category,
+}: Omit<ServiceCardProps, "number">) {
+  const t = useTranslations(`ServicePage.${category}`);
+  console.log(locale);
+  console.log(service);
 
   const title = service?.title[locale];
-
+  console.log(title);
   return (
     service && (
       <>
         <section className="pt-[68px] pb-section">
           <div className="my-container">
             <h1 className="font-exo2 text-md text-center mb-5">{title}</h1>
-            <ServiceBreadCrumb title={title} />
+            <ServiceDetailsBreadCrumb title={title} category={category} />
             <div
               className={`relative w-full overflow-hidden ${
                 service.attention ? "mb-3" : "mb-5"
@@ -93,7 +92,7 @@ export default function MakeupDetailsPage({
                 </li>
               </ul>
             </div>
-            {service.stages && (
+            {service.stages?.[1] && (
               <div>
                 <h2 className="text-base text-center font-exo2 mb-3">
                   {t("stages")}

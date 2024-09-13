@@ -1,4 +1,4 @@
-import CustomLink from "@/components/ui/CustomLink";
+import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 

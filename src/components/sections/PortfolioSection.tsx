@@ -1,34 +1,7 @@
-import CustomLink from "@/components/ui/CustomLink";
+import CustomLink from "@/components/ui/ClickableElements/CustomLink";
+import { images } from "@/constans/portfolio-images";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-
-const images = [
-  {
-    src: "/images/portfolio/portfolio.avif",
-    width: 168,
-    height: 214,
-    span: "row-span-2",
-  },
-  {
-    src: "/images/portfolio/portfolio2.avif",
-    width: 167,
-    height: 258,
-    span: "row-span-3",
-  },
-  {
-    src: "/images/portfolio/portfolio3.avif",
-    width: 168,
-    height: 268,
-    span: "row-span-3",
-  },
-  {
-    src: "/images/portfolio/portfolio4.avif",
-    width: 168,
-    height: 224,
-    span: "row-span-2",
-  },
-];
-
 export default function PortfolioSection() {
   const t = useTranslations("Home.portfolio");
   return (
@@ -42,7 +15,7 @@ export default function PortfolioSection() {
               <Image
                 width={img.width}
                 height={img.height}
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: "100%", height: "100%" }}
                 src={img.src}
                 alt={`portfolio image ${index + 1}`}
                 priority

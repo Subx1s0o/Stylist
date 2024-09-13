@@ -25,12 +25,8 @@ export interface Service {
   };
 }
 
-export interface ServicesPageProps {
-  services: {
-    services: Service[];
-    totalPages: number;
-  };
-  locale: Locale;
+export interface ServicesPageProps extends ServiceslistProps {
+  isFormat: boolean;
 }
 
 export interface ServiceslistProps {

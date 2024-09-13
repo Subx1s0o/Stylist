@@ -1,6 +1,6 @@
 "use client";
 
-import CustomLink from "@/components/ui/CustomLink";
+import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 import { ServiceCardProps } from "@/types/services.interface";
 import { animated, useSpring } from "@react-spring/web";
 import { useTranslations } from "next-intl";
@@ -37,7 +37,7 @@ export default function ServiceCard({
         <CustomLink
           className="max-w-[127px]"
           variant="outline"
-          href={`/services/makeup/${service._id}`}
+          href={`/services/${category.toLowerCase()}/${service._id}`}
         >
           {t("button")}
         </CustomLink>

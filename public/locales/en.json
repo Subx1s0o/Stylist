@@ -151,7 +151,10 @@
       "stages": "Stages"
     }
   },
-
+  "FormatButtonText": {
+    "online": "Online",
+    "offline": "Offline"
+  },
   "NotFound": {
     "description": "This page is not available. Please return to the previous page and try again later.",
     "button-title": "Go back"
