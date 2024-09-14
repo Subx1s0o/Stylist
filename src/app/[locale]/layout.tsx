@@ -1,4 +1,4 @@
-import Providers from "@/components/common/Providers/Providers";
+import ProgressBarProvider from "@/components/common/Providers/ProgressBarProvide";
 import Footer from "@/components/common/layout/Footer";
 import Header from "@/components/common/layout/Header";
 import "@/styles/globals.css";
@@ -61,11 +61,11 @@ export default async function RootLayout({
         className={`${alegreya.variable} ${exo_2.variable} bg-white font-alegreya text-black h-full flex flex-col`}
       >
         <NextIntlClientProvider messages={messages}>
-          <Providers>
+          <ProgressBarProvider>
             <Header />
-            <main className="flex-1  ">{children}</main>
+            <main className="flex-1">{children}</main>
             <Footer />
-          </Providers>
+          </ProgressBarProvider>
         </NextIntlClientProvider>
       </body>
     </html>
