@@ -4,10 +4,11 @@ import { useState } from "react";
 
 import { ServiceCardProps } from "@/types/services.interface";
 
-import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 import { animated, useSpring } from "@react-spring/web";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+
+import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 
 export default function ServiceCard({
   service,

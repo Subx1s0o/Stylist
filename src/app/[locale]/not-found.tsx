@@ -2,10 +2,11 @@
 
 import { useEffect } from "react";
 
-import CustomButton from "@/components/ui/ClickableElements/CustomButton";
 import { useTranslations } from "next-intl";
 import { startProgress } from "next-nprogress-bar";
 import { useRouter } from "next/navigation";
+
+import CustomButton from "@/components/ui/ClickableElements/CustomButton";
 
 export default function NotFound() {
   const t = useTranslations("NotFound");

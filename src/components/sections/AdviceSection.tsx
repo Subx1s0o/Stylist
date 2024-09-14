@@ -1,5 +1,6 @@
-import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 import { useTranslations } from "next-intl";
+
+import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 
 export default function AdviceSection() {
   const t = useTranslations("Home");

@@ -17,7 +17,7 @@ const FormatSwitcher: React.FC = () => {
   };
 
   return (
-    <div className="flex gap-3 mb-3">
+    <div className="flex gap-3 mb-3 border-b border-lightGrey">
       <FormatButton
         activeFormat={activeFormat}
         format="online"

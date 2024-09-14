@@ -19,6 +19,7 @@ export default function ServicesPage({
         <h1 className="font-exo2 text-md text-center mb-5">{t("title")}</h1>
         <ServicesBreadcrumb category={category} />
         {isFormat && <FormatSwitcher />}
+
         <ServicesList services={services} locale={locale} category={category} />
       </div>
     </section>

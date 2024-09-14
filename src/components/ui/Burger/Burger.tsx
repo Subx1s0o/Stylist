@@ -3,8 +3,9 @@
 import { useRef, useState } from "react";
 import { useClickAway } from "react-use";
 
-import Icon from "@/components/features/Icon";
 import { animated, useTransition } from "@react-spring/web";
+
+import Icon from "@/components/features/Icon";
 
 import MobileLocaleSwitcher from "../localeSwitcher/MobileLocaleSwitcher";
 import BurgerMenuLinks from "./BurgerMenuLinks";

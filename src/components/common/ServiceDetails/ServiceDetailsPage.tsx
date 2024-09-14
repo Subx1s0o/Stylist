@@ -1,9 +1,10 @@
 import { ServiceCardProps } from "@/types/services.interface";
 
-import ServiceDetailsBreadCrumb from "@/components/elements/BreadCrumb/ServiceDetailsBreadcrumb";
-import AdviceSection from "@/components/sections/AdviceSection";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+
+import ServiceDetailsBreadCrumb from "@/components/elements/BreadCrumb/ServiceDetailsBreadcrumb";
+import AdviceSection from "@/components/sections/AdviceSection";
 
 export default function ServiceDetailsPage({
   service,

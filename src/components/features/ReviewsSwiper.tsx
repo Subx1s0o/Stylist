@@ -1,11 +1,12 @@
 "use client";
 
-import Icon from "@/components/features/Icon";
 import { slides } from "@/constans/reviews";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import Icon from "@/components/features/Icon";
 
 export default function ReviewsSwiper() {
   const t = useTranslations("Reviews");

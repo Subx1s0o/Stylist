@@ -19,8 +19,8 @@ const FormatButton = forwardRef<HTMLButtonElement, FormatButtonProps>(
     const buttonClasses = clsx(
       "px-4 py-2 text-base font-exo2 w-full text-center",
       {
-        "bg-lightGrey text-black": activeFormat === format,
-        "bg-white text-black border-b border-gray-300": activeFormat !== format,
+        "bg-lightGrey": activeFormat === format,
+        "bg-transparent": activeFormat !== format,
       },
       className,
     );

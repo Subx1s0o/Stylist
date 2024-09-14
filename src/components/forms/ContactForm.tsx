@@ -4,9 +4,10 @@ import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useMedia } from "react-use";
 
-import CustomButton from "@/components/ui/ClickableElements/CustomButton";
 import { useFormTranslations } from "@/hooks/useFormTranslations";
 import { useLocale } from "next-intl";
+
+import CustomButton from "@/components/ui/ClickableElements/CustomButton";
 
 type FormValues = {
   name: string;

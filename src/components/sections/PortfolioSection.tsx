@@ -1,7 +1,8 @@
-import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 import { images } from "@/constans/portfolio-images";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+
+import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 
 export default function PortfolioSection() {
   const t = useTranslations("Home.portfolio");

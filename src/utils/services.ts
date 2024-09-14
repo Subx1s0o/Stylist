@@ -3,11 +3,17 @@ export async function fetchServices(
   category: string,
   format?: string,
 ) {
-  const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/services/${category}?${
-    format && `format=${format}`
-  }&limit=5&page=${page}`;
+  const url = new URL(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/services/${category}`,
+  );
+  url.searchParams.append("limit", "5");
+  url.searchParams.append("page", page.toString());
+  if (format) {
+    url.searchParams.append("format", format);
+  }
+
   try {
-    const res = await fetch(url, { next: { revalidate: 1200 } });
+    const res = await fetch(url.toString(), { next: { revalidate: 1200 } });
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }

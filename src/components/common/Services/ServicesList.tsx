@@ -22,20 +22,30 @@ export default function ServicesList({
 
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(services.totalPages);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setCurrentServices(services);
     setTotalPages(services.totalPages);
-  }, [services.totalPages, services]);
+    setCurrentPage(1);
+  }, [services]);
 
   const loadMore = async () => {
-    const newPage = await loadMoreServices(
-      currentPage,
-      setCurrentServices,
-      fetchServices,
-      category.toLowerCase(),
-    );
-    setCurrentPage(newPage);
+    setLoading(true);
+    try {
+      const newPage = await loadMoreServices(
+        currentPage,
+        setCurrentServices,
+        fetchServices,
+        category.toLowerCase(),
+      );
+      setCurrentPage(newPage);
+    } catch (error) {
+      setLoading(false);
+      console.error("Failed to load more services:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const observerRef = useInfiniteScroll({
@@ -45,18 +55,22 @@ export default function ServicesList({
   });
 
   return (
-    <ul className="flex flex-col gap-7">
-      {currentServices.services.map((service, number) => (
-        <ServiceCard
-          key={service._id}
-          service={service}
-          number={number}
-          category={category}
-          locale={locale}
-        />
-      ))}
+    <div>
+      <ul className="flex flex-col gap-7">
+        {currentServices.services.map((service, number) => (
+          <ServiceCard
+            key={service._id}
+            service={service}
+            number={number}
+            category={category}
+            locale={locale}
+          />
+        ))}
 
-      <li ref={observerRef} className="h-10"></li>
-    </ul>
+        <li ref={observerRef} className="h-10"></li>
+      </ul>
+
+      {loading && <div className="text-center py-4">Loading...</div>}
+    </div>
   );
 }

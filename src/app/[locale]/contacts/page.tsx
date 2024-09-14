@@ -1,10 +1,11 @@
-import ContactForm from "@/components/forms/ContactForm";
 import { defaultLocale } from "@/utils/config";
 import { contactsMetadataConfig } from "@/utils/metadata";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getLocale } from "next-intl/server";
 import Image from "next/image";
+
+import ContactForm from "@/components/forms/ContactForm";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) || defaultLocale;
