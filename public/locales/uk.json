@@ -1,10 +1,20 @@
 {
   "Common": {
     "menu": {
-      "about-me": "Про мене",
       "portfolio": "Портфоліо",
       "services": "Послуги",
       "contacts": "Контакти"
+    },
+    "ContactsModal": {
+      "success": {
+        "title": "Запит надіслано, дякую за Вашу довіру",
+        "message": "Найближчим часом я зв’яжусь з Вами"
+      },
+      "error": {
+        "title": "",
+        "message": "ероро ерор"
+      },
+      "close": "Назад"
     }
   },
   "Home": {

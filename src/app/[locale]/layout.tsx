@@ -1,3 +1,6 @@
+import Providers from "@/components/common/Providers/Providers";
+import Footer from "@/components/common/layout/Footer";
+import Header from "@/components/common/layout/Header";
 import "@/styles/globals.css";
 import { defaultLocale } from "@/utils/config";
 import { homeMetadataConfig } from "@/utils/metadata";
@@ -5,10 +8,6 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Alegreya, Exo_2 } from "next/font/google";
-
-import Providers from "@/components/common/Providers/Providers";
-import Footer from "@/components/common/layout/Footer";
-import Header from "@/components/common/layout/Header";
 
 const alegreya = Alegreya({
   subsets: ["latin"],

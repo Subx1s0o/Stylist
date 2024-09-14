@@ -1,9 +1,8 @@
+import ServicesSection from "@/components/sections/ServicesSection";
 import { defaultLocale } from "@/utils/config";
 import { servicesMetadataConfig } from "@/utils/metadata";
 import { Metadata } from "next";
 import { getLocale } from "next-intl/server";
-
-import ServicesSection from "@/components/sections/ServicesSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = (await getLocale()) || defaultLocale;

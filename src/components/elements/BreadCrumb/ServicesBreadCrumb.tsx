@@ -1,6 +1,5 @@
-import { useTranslations } from "next-intl";
-
 import BreadcrumbItem from "@/components/elements/BreadCrumb/BreadCrumbItem";
+import { useTranslations } from "next-intl";
 
 export default function ServicesBreadcrumb({
   category,

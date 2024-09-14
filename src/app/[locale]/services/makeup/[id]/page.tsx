@@ -1,8 +1,7 @@
+import ServiceDetailsPage from "@/components/common/ServiceDetails/ServiceDetailsPage";
 import { defaultLocale, Locale } from "@/utils/config";
 import { fetchService } from "@/utils/services";
 import { getLocale } from "next-intl/server";
-
-import ServiceDetailsPage from "@/components/common/ServiceDetails/ServiceDetailsPage";
 
 export default async function MakeupLayout({
   params: { id },

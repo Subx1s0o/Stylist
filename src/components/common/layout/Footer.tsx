@@ -1,11 +1,9 @@
+import Icon from "@/components/features/Icon";
+import HomeLogo from "@/components/ui/ClickableElements/HomeLogo";
 import { links } from "@/constans/paths";
 import { socialLinks } from "@/constans/socials";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-
-import Icon from "@/components/features/Icon";
-
-import HomeLogo from "../../ui/ClickableElements/HomeLogo";
 
 export default function Footer() {
   const t = useTranslations("Common.menu");
@@ -17,13 +15,13 @@ export default function Footer() {
         </HomeLogo>
         <nav className=" w-full flex flex-col gap-6 items-center">
           <ul className="flex flex-col gap-1 w-full ">
-            {links.slice(0, 2).map(({ href, key }) => (
-              <li key={key}>
+            {links.slice(0, 2).map(({ href, textKey }) => (
+              <li key={href}>
                 <Link
                   className="text-base-thin block text-center py-[6px] cursor-pointer w-full"
                   href={href}
                 >
-                  {t(key)}
+                  {t(textKey)}
                 </Link>
               </li>
             ))}

@@ -1,7 +1,6 @@
+import Icon from "@/components/features/Icon";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-
-import Icon from "@/components/features/Icon";
 
 export default function AboutMeSection() {
   const t = useTranslations("Home.about-me");

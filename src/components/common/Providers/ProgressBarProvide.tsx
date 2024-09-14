@@ -9,7 +9,7 @@ export const progressBarRef = {
   finish: () => {},
 };
 
-const Providers: FC<PropsWithChildren> = ({ children }) => {
+const ProgressBarProvider: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <ProgressBar
@@ -23,4 +23,4 @@ const Providers: FC<PropsWithChildren> = ({ children }) => {
   );
 };
 
-export default Providers;
+export default ProgressBarProvider;

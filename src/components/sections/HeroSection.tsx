@@ -1,7 +1,6 @@
+import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-
-import CustomLink from "@/components/ui/ClickableElements/CustomLink";
 
 export default function HeroSection() {
   const t = useTranslations("Home");
