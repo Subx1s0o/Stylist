@@ -1,22 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { animated, useSpring } from "@react-spring/web";
 import { useTranslations } from "next-intl";
 
 interface ContactModalProps {
   isOpen: boolean;
-  onClose: () => void;
+  closeModal: () => void;
   type: "success" | "error";
 }
 
 export default function ContactModal({
   isOpen,
-  onClose,
+  closeModal,
   type,
 }: ContactModalProps) {
-  const t = useTranslations();
+  const t = useTranslations("Common.ContactsModal");
   const [show, setShow] = useState(isOpen);
 
   const { opacity, transform } = useSpring({
@@ -24,30 +24,25 @@ export default function ContactModal({
     transform: show ? "translateY(0)" : "translateY(-50%)",
     config: { tension: 220, friction: 20 },
     onRest: () => {
-      if (!show) onClose();
+      if (!show && !isOpen) closeModal();
     },
   });
 
-  if (isOpen && !show) {
-    setShow(true);
-  }
+  useEffect(() => {
+    if (isOpen) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  }, [isOpen]);
 
-  const closeModal = () => {
-    setShow(false);
-  };
-
-  if (!isOpen && show) {
+  if (!show && !isOpen) {
     return null;
   }
 
-  const title =
-    type === "success"
-      ? t("ContactsModal.success.title")
-      : t("ContactsModal.error.title");
+  const title = type === "success" ? t("success.title") : t("error.title");
   const message =
-    type === "success"
-      ? t("ContactsModal.success.message")
-      : t("ContactsModal.error.message");
+    type === "success" ? t("success.message") : t("error.message");
 
   return (
     <animated.div
@@ -63,7 +58,7 @@ export default function ContactModal({
       }}
     >
       <animated.div
-        className={"p-6 rounded shadow-lg "}
+        className={"p-6 rounded shadow-lg bg-white"}
         style={{
           opacity,
           transform,
@@ -73,9 +68,9 @@ export default function ContactModal({
         <p>{message}</p>
         <button
           onClick={closeModal}
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+          className="mt-4 px-4 py-2 bg-black text-white rounded"
         >
-          {t("ContactsModal.close")}
+          {t("close")}
         </button>
       </animated.div>
     </animated.div>

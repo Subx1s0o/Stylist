@@ -7,17 +7,18 @@
       "FormatButtonText": {
         "online": "Online",
         "offline": "Offline"
-      },
-      "ContactsModal": {
-        "success": {
-          "title": "",
-          "description": ""
-        },
-        "error": {
-          "title": "",
-          "description": ""
-        }
       }
+    },
+    "ContactsModal": {
+      "success": {
+        "title": "",
+        "message": ""
+      },
+      "error": {
+        "title": "",
+        "message": ""
+      },
+      "close": ""
     }
   },
   "Home": {

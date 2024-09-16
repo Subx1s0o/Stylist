@@ -3,9 +3,10 @@ import { ContactsData } from "@/types/contactsData.interface";
 import { EndPoints } from "../constans/endpoints";
 
 export async function sendContactsData(data: ContactsData) {
+  console.log(data);
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}${EndPoints.CONTACTS}`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/${EndPoints.CONTACTS}`,
       {
         method: "POST",
         headers: {

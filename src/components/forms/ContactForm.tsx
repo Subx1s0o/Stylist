@@ -62,7 +62,7 @@ export default function ContactForm() {
       {modalState && (
         <ContactsModal
           isOpen={modalState.isOpen}
-          onClose={handleCloseModal}
+          closeModal={handleCloseModal}
           type={modalState.type}
         />
       )}
