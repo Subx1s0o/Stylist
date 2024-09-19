@@ -31,6 +31,7 @@ export default function ServicesList({
   }, [services]);
 
   const loadMore = async () => {
+    if (loading || currentPage >= totalPages) return;
     setLoading(true);
     try {
       const newPage = await loadMoreServices(

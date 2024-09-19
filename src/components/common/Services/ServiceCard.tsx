@@ -23,6 +23,7 @@ export default function ServiceCard({
   };
 
   const fadeInStyle = useSpring({
+    transform: imageLoaded ? "translateY(0px)" : "translateY(20px)",
     opacity: imageLoaded ? 1 : 0,
     config: { tension: 220, friction: 20 },
   });
@@ -52,10 +53,7 @@ export default function ServiceCard({
           fill
           sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
           style={{ objectFit: "cover" }}
-          quality={70}
           onLoad={handleImageLoad}
-          loading="eager"
-          priority
         />
       </div>
     </animated.li>

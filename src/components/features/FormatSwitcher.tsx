@@ -2,6 +2,7 @@
 
 import FormatButton from "@/components/ui/ClickableElements/FormatButton";
 import { useTranslations } from "next-intl";
+import { startProgress } from "next-nprogress-bar";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const FormatSwitcher: React.FC = () => {
@@ -11,9 +12,12 @@ const FormatSwitcher: React.FC = () => {
   const activeFormat = searchParams.get("format") || "online";
 
   const handleFormatChange = (newFormat: string) => {
-    const newParams = new URLSearchParams(searchParams.toString());
-    newParams.set("format", newFormat);
-    router.push(`/services/style?${newParams.toString()}`);
+    if (newFormat !== activeFormat) {
+      const newParams = new URLSearchParams(searchParams.toString());
+      newParams.set("format", newFormat);
+      startProgress();
+      router.push(`/services/style?${newParams.toString()}`);
+    }
   };
 
   return (

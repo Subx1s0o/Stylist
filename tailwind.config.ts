@@ -14,7 +14,6 @@ export default {
       },
       fontFamily: {
         exo2: ["var(--font-exo_2)", "sans-serif"],
-        alegreya: ["var(--font-alegreya)", "serif"],
       },
       colors: {
         darkGrey: "#645E58",
@@ -57,7 +56,7 @@ export default {
           "20px",
           {
             fontWeight: 500,
-            lineHeight: "20px",
+            lineHeight: "24px",
           },
         ],
         "base-thin": [

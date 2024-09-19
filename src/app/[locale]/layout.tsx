@@ -12,7 +12,6 @@ import { Alegreya, Exo_2 } from "next/font/google";
 const alegreya = Alegreya({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  variable: "--font-alegreya",
   display: "swap",
 });
 const exo_2 = Exo_2({
@@ -58,7 +57,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${alegreya.variable} ${exo_2.variable} bg-white font-alegreya text-black h-full flex flex-col`}
+        className={`${alegreya.className} ${exo_2.variable} bg-white text-black h-full flex flex-col`}
       >
         <NextIntlClientProvider messages={messages}>
           <ProgressBarProvider>
