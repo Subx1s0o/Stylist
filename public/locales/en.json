@@ -21,6 +21,10 @@
         "message": "Please try again later or check connection"
       },
       "close": "Close"
+    },
+    "FormatButtonText": {
+      "online": "Online",
+      "offline": "Offline"
     }
   },
   "Home": {

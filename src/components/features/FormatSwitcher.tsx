@@ -8,7 +8,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 const FormatSwitcher: React.FC = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const t = useTranslations("FormatButtonText");
+  const t = useTranslations("Common.FormatButtonText");
   const activeFormat = searchParams.get("format") || "online";
 
   const handleFormatChange = (newFormat: string) => {
