@@ -9,16 +9,18 @@
         "offline": "Offline"
       }
     },
+
     "ContactsModal": {
       "success": {
-        "title": "",
-        "message": ""
+        "title": "Request Sent,",
+        "subtitle": "thank you for your trust",
+        "message": "I will get in touch with you soon"
       },
       "error": {
-        "title": "",
-        "message": ""
+        "title": "Your Request Not Sent!",
+        "message": "Please try again later or check connection"
       },
-      "close": ""
+      "close": "Close"
     }
   },
   "Home": {

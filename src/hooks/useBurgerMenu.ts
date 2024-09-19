@@ -8,7 +8,7 @@ export function useBurgerMenu() {
   const closeMenu = () => setOpen(false);
   const toggleMenu = () => setOpen((prev) => !prev);
 
-  useClickAway(ref, () => setOpen(false));
+  useClickAway(ref, closeMenu);
 
   return {
     open,

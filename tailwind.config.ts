@@ -21,7 +21,7 @@ export default {
         error: "#FF4444",
         black: "#2B2423",
         white: "#FAF8F0",
-        "primary-black": "rgba(43, 36, 35, 0.8)",
+        "primary-black": "rgba(43, 36, 35, 0.85)",
       },
       fontSize: {
         xl: [
