@@ -37,7 +37,7 @@ export default function ServiceDetailsPage({
 
             {service.attention && (
               <div className="border border-darkGrey p-2 mb-5">
-                <ul className="flex gap-3 items-center">
+                <ul className="flex gap-3 items-center justify-center">
                   <li className="font-exo2 text-xmd">!</li>
                   <li>
                     <small className="text-sm ">
