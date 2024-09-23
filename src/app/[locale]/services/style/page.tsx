@@ -9,15 +9,15 @@ interface StyleUpPageProps {
 
 export default async function StyleUpPage({ searchParams }: StyleUpPageProps) {
   const { format } = searchParams;
-  const actualFormat = format || "online";
+  const actualFormat = (format as "online" | "offline") || "online";
   const services = await fetchServices(1, "style", actualFormat);
   const locale = (await getLocale()) || defaultLocale;
   return (
     <ServicesPage
       services={services}
       locale={locale as Locale}
-      isFormat={true}
       category="Style"
+      format={actualFormat}
     />
   );
 }

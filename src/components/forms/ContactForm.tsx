@@ -45,7 +45,11 @@ export default function ContactForm() {
   return (
     <>
       {modalState && (
-        <ContactsModal closeModal={handleCloseModal} type={modalState.type} isOpen={modalState.isOpen} />
+        <ContactsModal
+          closeModal={handleCloseModal}
+          type={modalState.type}
+          isOpen={modalState.isOpen}
+        />
       )}
       <form
         onSubmit={handleSubmit(onSubmit)}

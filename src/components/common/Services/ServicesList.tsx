@@ -14,6 +14,7 @@ export default function ServicesList({
   services,
   locale,
   category,
+  format,
 }: ServiceslistProps) {
   const [currentServices, setCurrentServices] = useState<{
     services: Service[];
@@ -39,6 +40,7 @@ export default function ServicesList({
         setCurrentServices,
         fetchServices,
         category.toLowerCase(),
+        format,
       );
       setCurrentPage(newPage);
     } catch (error) {

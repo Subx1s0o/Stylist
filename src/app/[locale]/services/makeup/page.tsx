@@ -12,7 +12,6 @@ export default async function MakeUpPage() {
       services={services}
       locale={locale as Locale}
       category="Makeup"
-      isFormat={false}
     />
   );
 }

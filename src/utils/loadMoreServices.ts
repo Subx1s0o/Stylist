@@ -11,13 +11,16 @@ export const loadMoreServices = async (
   fetchServices: (
     currentPage: number,
     category: string,
+    format?: string,
   ) => Promise<{ services: Service[]; totalPages: number }>,
   category: string,
+  format?: string,
 ) => {
   try {
     const { services: newServices, totalPages } = await fetchServices(
       currentPage + 1,
       category,
+      format,
     );
 
     setCurrentServices((prev) => ({

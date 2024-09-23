@@ -9,8 +9,8 @@ import ServicesList from "./ServicesList";
 export default function ServicesPage({
   services,
   locale,
-  isFormat,
   category,
+  format,
 }: ServicesPageProps) {
   const t = useTranslations(category);
   return (
@@ -18,9 +18,14 @@ export default function ServicesPage({
       <div className="my-container">
         <h1 className="font-exo2 text-md text-center mb-5">{t("title")}</h1>
         <ServicesBreadcrumb category={category} />
-        {isFormat && <FormatSwitcher />}
+        {format && <FormatSwitcher />}
 
-        <ServicesList services={services} locale={locale} category={category} />
+        <ServicesList
+          format={format}
+          services={services}
+          locale={locale}
+          category={category}
+        />
       </div>
     </section>
   );

@@ -11,11 +11,7 @@ export default function ServiceDetailsPage({
   category,
 }: Omit<ServiceCardProps, "number">) {
   const t = useTranslations(`ServicePage.${category}`);
-  console.log(locale);
-  console.log(service);
-
   const title = service?.title[locale];
-  console.log(title);
   return (
     service && (
       <>

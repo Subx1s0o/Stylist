@@ -26,7 +26,7 @@ export interface Service {
 }
 
 export interface ServicesPageProps extends ServiceslistProps {
-  isFormat: boolean;
+  format?: "online" | "offline";
 }
 
 export interface ServiceslistProps {
@@ -36,6 +36,7 @@ export interface ServiceslistProps {
   };
   locale: Locale;
   category: "Style" | "Makeup";
+  format?: "online" | "offline";
 }
 
 export interface ServiceCardProps {
