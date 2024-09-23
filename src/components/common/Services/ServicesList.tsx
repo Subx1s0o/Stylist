@@ -59,7 +59,7 @@ export default function ServicesList({
 
   return (
     <div>
-      <ul className="flex flex-col gap-7">
+      <ul className="relative flex flex-col gap-7 ">
         {currentServices.services.map((service, number) => (
           <ServiceCard
             key={service._id}
@@ -70,7 +70,10 @@ export default function ServicesList({
           />
         ))}
 
-        <li ref={observerRef} className="h-10"></li>
+        <li
+          ref={observerRef}
+          className="h-10 absolute bottom-0 w-full pointer-events-none"
+        ></li>
       </ul>
 
       {loading && <div className="text-center py-4">Loading...</div>}

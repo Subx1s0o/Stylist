@@ -97,17 +97,13 @@ export default function ServiceDetailsPage({
                   <ul className="flex flex-col gap-[22px] relative">
                     {Object.entries(service.stages).map(
                       ([key, value], index) => (
-                        <li key={key} className="relative flex items-center">
-                          <div className="relative size-5 flex items-center justify-center rounded-full bg-black">
-                            <small className="absolute flex items-center justify-center  inset-0 font-exo2 text-xxs  text-white font-bold">
-                              {index + 1}
-                            </small>
-                          </div>
-
-                          <div className="flex-1 ">
-                            <p className="text-sm font-exo2 ">
-                              {value[locale]}
-                            </p>
+                        <li
+                          key={key}
+                          className="border-b border-darkGrey py-2 px-5 "
+                        >
+                          <div className="flex items-center gap-2 ">
+                            <h4 className="text-md font-exo2 ">{index + 1}</h4>
+                            <p className="text-sm  ">{value[locale]}</p>
                           </div>
                         </li>
                       ),
