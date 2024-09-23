@@ -20,7 +20,7 @@ export default {
         lightGrey: "#ECE8E7",
         error: "#FF4444",
         black: "#2B2423",
-        white: "#FAF8F0",
+        white: "#FFFFF7",
         "primary-black": "rgba(43, 36, 35, 0.85)",
       },
       fontSize: {

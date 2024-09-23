@@ -8,9 +8,8 @@ export default function AboutMeSection() {
     <section className="pb-section">
       <div className="my-container">
         <h2 className="text-md font-exo2 text-center mb-5">{t("title")}</h2>
-        <p className="mb-[17px] max-w-[195px] text-sm">{t("first-text")}</p>
         <ul className="grid grid-rows-2 gap-[22px] ">
-          <li className="grid grid-cols-[1fr_1fr] gap-4 items-center">
+          <li className="grid grid-cols-[1fr_0.9fr] gap-4 items-center">
             <div className="relative">
               <Image
                 src="/images/about/about-me1.avif"
@@ -19,9 +18,10 @@ export default function AboutMeSection() {
                 height={272}
                 style={{
                   width: "100%",
-                  minWidth: "134px",
+
                   height: "auto",
-                  minHeight: "232px",
+
+                  objectFit: "cover",
                 }}
                 priority
               />
@@ -40,10 +40,10 @@ export default function AboutMeSection() {
               />
             </div>
 
-            <p className="text-sm max-w-[153px]">{t("second-text")}</p>
+            <p className="text-sm ">{t("first-text")}</p>
           </li>
           <li className="grid grid-cols-[1fr_2fr]  gap-4 items-center">
-            <p className="text-sm">{t("third-text")}</p>
+            <p className="text-sm">{t("second-text")}</p>
 
             <div className="relative">
               <Image
