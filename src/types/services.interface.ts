@@ -23,6 +23,8 @@ export interface Service {
     5?: Translations;
     6?: Translations;
   };
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface ServicesPageProps extends ServiceslistProps {

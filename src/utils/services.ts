@@ -39,7 +39,7 @@ export async function fetchService(id: string) {
     }
     return res.json();
   } catch (error) {
+    console.error(error);
     notFound();
-    return { services: null };
   }
 }
