@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 import { EndPoints } from "../constans/endpoints";
 
 export async function fetchServices(
@@ -33,11 +35,11 @@ export async function fetchService(id: string) {
   try {
     const res = await fetch(url, { next: { revalidate: 1200 } });
     if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
+      notFound();
     }
     return res.json();
   } catch (error) {
-    console.error("Failed to fetch services:", error);
+    notFound();
     return { services: null };
   }
 }
