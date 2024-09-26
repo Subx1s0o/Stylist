@@ -5,6 +5,7 @@ import FormatSwitcher from "@/components/features/FormatSwitcher";
 import { useTranslations } from "next-intl";
 
 import ServicesList from "./ServicesList";
+import ServicesNotFound from "./ServicesNotFound";
 
 export default function ServicesPage({
   services,
@@ -20,12 +21,16 @@ export default function ServicesPage({
         <ServicesBreadcrumb category={category} />
         {format && <FormatSwitcher />}
 
-        <ServicesList
-          format={format}
-          services={services}
-          locale={locale}
-          category={category}
-        />
+        {services.services.length > 0 ? (
+          <ServicesList
+            format={format}
+            services={services}
+            locale={locale}
+            category={category}
+          />
+        ) : (
+          <ServicesNotFound />
+        )}
       </div>
     </section>
   );
