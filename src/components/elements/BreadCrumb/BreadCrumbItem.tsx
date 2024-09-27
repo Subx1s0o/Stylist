@@ -12,7 +12,7 @@ export default function BreadcrumbItem({
   return (
     <li>
       {isLast ? (
-        <p>{children}</p>
+        <p className="line-clamp-1">{children}</p>
       ) : (
         <>
           <Link href={href}>{children}</Link>
