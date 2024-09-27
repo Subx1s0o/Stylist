@@ -52,14 +52,17 @@ export default function ServiceDetailsPage({
                 {t("conditions.title")}
               </h2>
               <ul className="inline-flex flex-col gap-2">
-                <li>
-                  <p className="text-sm">
-                    <span className="font-medium">
-                      {t("conditions.duration_work")}:{" "}
-                    </span>
-                    {service.duration_work[locale]}
-                  </p>
-                </li>
+                {service.duration_work && (
+                  <li>
+                    <p className="text-sm">
+                      <span className="font-medium">
+                        {t("conditions.duration_work")}:{" "}
+                      </span>
+                      {service.duration_work[locale]}
+                    </p>
+                  </li>
+                )}
+
                 {service.duration_consultation && (
                   <li>
                     <p className="text-sm">

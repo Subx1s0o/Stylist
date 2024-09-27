@@ -11,8 +11,8 @@ export interface Service {
   result: Translations;
   imageUrl: string;
   attention?: Translations;
-  duration_work: Translations;
-  duration_consultation?: Translations;
+  duration_work?: Translations;
+  duration_consultation: Translations;
   format: string;
   price: number;
   stages?: {
