@@ -26,7 +26,7 @@ export default function ServiceDetailsPage({
               style={{ aspectRatio: "343 / 371" }}
             >
               <Image
-                src={service.imageUrl}
+                src={service.image}
                 alt={title}
                 fill
                 priority
