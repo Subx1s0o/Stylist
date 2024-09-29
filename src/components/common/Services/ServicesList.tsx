@@ -17,22 +17,23 @@ export default function ServicesList({
   format,
 }: ServiceslistProps) {
   const [currentServices, setCurrentServices] = useState<{
-    services: Service[];
+    data: Service[];
     totalPages: number;
-  }>(services);
+  }>({
+    data: services.data,
+    totalPages: services.totalPages,
+  });
 
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [totalPages, setTotalPages] = useState<number>(services.totalPages);
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setCurrentServices(services);
-    setTotalPages(services.totalPages);
     setCurrentPage(1);
   }, [services]);
 
   const loadMore = async () => {
-    if (loading || currentPage >= totalPages) return;
+    if (loading || currentPage >= currentServices.totalPages) return;
     setLoading(true);
     try {
       const newPage = await loadMoreServices(
@@ -44,7 +45,6 @@ export default function ServicesList({
       );
       setCurrentPage(newPage);
     } catch (error) {
-      setLoading(false);
       console.error("Failed to load more services:", error);
     } finally {
       setLoading(false);
@@ -54,13 +54,13 @@ export default function ServicesList({
   const observerRef = useInfiniteScroll({
     loadMore,
     currentPage,
-    totalPages,
+    totalPages: currentServices.totalPages,
   });
 
   return (
     <div>
       <ul className="relative flex flex-col gap-7 ">
-        {currentServices.services.map((service, number) => (
+        {currentServices.data.map((service, number) => (
           <ServiceCard
             key={service._id}
             service={service}

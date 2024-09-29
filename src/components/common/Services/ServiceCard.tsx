@@ -28,8 +28,6 @@ export default function ServiceCard({
     config: { tension: 220, friction: 20 },
   });
 
-  console.log(service.image);
-
   return (
     <animated.li style={fadeInStyle} className="grid grid-cols-2 gap-2">
       <div className="overflow-hidden">

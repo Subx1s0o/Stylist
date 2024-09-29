@@ -33,7 +33,7 @@ export interface ServicesPageProps extends ServiceslistProps {
 
 export interface ServiceslistProps {
   services: {
-    services: Service[];
+    data: Service[];
     totalPages: number;
   };
   locale: Locale;

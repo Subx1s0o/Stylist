@@ -1,3 +1,5 @@
+import { Service } from "@/types/services.interface";
+
 import { notFound } from "next/navigation";
 
 import { EndPoints } from "../constans/endpoints";
@@ -6,7 +8,7 @@ export async function fetchServices(
   page: number = 1,
   category: string,
   format?: string,
-) {
+): Promise<{ data: Service[]; totalPages: number }> {
   const url = new URL(
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/${EndPoints.SERVICES}/${category}`,
   );
@@ -22,14 +24,15 @@ export async function fetchServices(
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
 
-    return res.json();
+    const response = await res.json();
+    return { data: response.data || [], totalPages: response.totalPages || 0 };
   } catch (error) {
     console.error("Failed to fetch services:", error);
-    return { services: [] };
+    return { data: [], totalPages: 0 };
   }
 }
 
-export async function fetchService(id: string) {
+export async function fetchService(id: string): Promise<Service> {
   const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/${EndPoints.SERVICES}/${id}`;
 
   try {

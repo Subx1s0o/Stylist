@@ -1,7 +1,7 @@
 import { Service } from "@/types/services.interface";
 
 interface ServicesState {
-  services: Service[];
+  data: Service[];
   totalPages: number;
 }
 
@@ -12,19 +12,19 @@ export const loadMoreServices = async (
     currentPage: number,
     category: string,
     format?: string,
-  ) => Promise<{ services: Service[]; totalPages: number }>,
+  ) => Promise<{ data: Service[]; totalPages: number }>,
   category: string,
   format?: string,
 ) => {
   try {
-    const { services: newServices, totalPages } = await fetchServices(
+    const { data: newServices, totalPages } = await fetchServices(
       currentPage + 1,
       category,
       format,
     );
 
     setCurrentServices((prev) => ({
-      services: [...prev.services, ...newServices],
+      data: [...prev.data, ...newServices],
       totalPages,
     }));
 

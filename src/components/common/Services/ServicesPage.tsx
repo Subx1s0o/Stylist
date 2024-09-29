@@ -21,7 +21,7 @@ export default function ServicesPage({
         <ServicesBreadcrumb category={category} />
         {format && <FormatSwitcher />}
 
-        {services.services.length > 0 ? (
+        {services.data.length > 0 ? (
           <ServicesList
             format={format}
             services={services}
